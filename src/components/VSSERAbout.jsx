@@ -1,37 +1,68 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-// Parent variant for staggering
 const containerVariant = {
   hidden: {},
-  visible: {
-    transition: {
+  visible: { 
+    transition: { 
       staggerChildren: 0.02,
-    },
-  },
+      delayChildren: 0.1
+    } 
+  }
 };
 
-// Word animation variant
 const wordVariant = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
+  hidden: { 
+    opacity: 0, 
+    y: 20,
+    scale: 0.95
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    scale: 1,
+    transition: { 
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94]
+    }
+  }
 };
 
-// Word-by-word animation component
+const sectionVariant = {
+  hidden: { 
+    opacity: 0, 
+    y: 30,
+    scale: 0.98
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    scale: 1,
+    transition: { 
+      duration: 0.7,
+      ease: [0.25, 0.46, 0.45, 0.94]
+    }
+  }
+};
+
 const AnimatedText = ({ text, className = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-10px" });
-
+  const isInView = useInView(ref, { once: false, margin: "-20px" });
+  
   return (
-    <motion.div
-      ref={ref}
-      variants={containerVariant}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+    <motion.div 
+      ref={ref} 
+      variants={containerVariant} 
+      initial="hidden" 
+      animate={isInView ? "visible" : "hidden"} 
       className={`inline-block ${className}`}
     >
       {text.split(" ").map((word, i) => (
-        <motion.span key={i} variants={wordVariant} className="inline-block mr-2">
+        <motion.span 
+          key={i} 
+          variants={wordVariant} 
+          className="inline-block mr-2"
+        >
           {word}
         </motion.span>
       ))}
@@ -39,66 +70,229 @@ const AnimatedText = ({ text, className = "" }) => {
   );
 };
 
-const VSSERAbout = () => {
+const AnimatedSection = ({ children, className = "" }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-40px" });
+  
   return (
-    <div className="relative z-10 w-full bg-cover bg-center bg-[#02050a]">
-      <div className="max-w-5xl mx-auto px-4 py-10 text-white backdrop-blur-md text-2xl space-y-10">
-        
-        <section>
-          <AnimatedText text="About VSSER" className="text-3xl font-bold mb-6" />
-          <AnimatedText text="The Virtual Summer School in Entrepreneurship Research (VSSER) is a global, no-fee academic platform designed to build research capacity in the field of entrepreneurship. Established in 2021, VSSER has quickly grown into one of the most accessible and widely attended initiatives for emerging scholars, attracting over 1,000 participants from more than 35 countries in its first four years." className="text-gray-400 mb-4" />
-          <AnimatedText text="VSSER provides an opportunity to learn directly from leading researchers, gain insights into publishing in top-tier entrepreneurship journals, and connect with a global network of like-minded individuals passionate about entrepreneurship research. Whether you are a student, early-career researcher, or an aspiring academic, VSSER offers an inclusive space to enhance your research skills, understand contemporary debates, and engage with cutting-edge scholarship." className="text-gray-400" />
-        </section>
-
-        <section>
-          <AnimatedText text="Why Join VSSER?" className="text-2xl font-semibold mb-6" />
-          <ul className="list-disc ml-6 space-y-2 text-gray-400 marker:text-[#00ff9f]">
-            {[
-              "Learn how to design, conduct, and publish high-quality entrepreneurship research.",
-              "Hear directly from senior scholars and editors shaping the future of the field.",
-              "Connect with a diverse, international community of researchers.",
-              "Access expert-led sessions, all at no cost.",
-            ].map((text, idx) => (
-              <li key={idx}>
-                <AnimatedText text={text} />
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <AnimatedText text="Our Impact" className="text-4xl font-semibold mb-6" />
-          <AnimatedText text="Since its inception in 2021, the Virtual Summer School in Entrepreneurship Research (VSSER) has created a unique, no-cost platform for building research capacity in entrepreneurship studies across the globe." className="text-gray-400 mb-4" />
-          <AnimatedText text="Over the past four years, VSSER has:" className="text-gray-400 mb-4" />
-          <ul className="list-disc ml-6 space-y-2 text-gray-400 marker:text-[#00ff9f]">
-            {[
-              "Empowered 1,000+ participants from more than 35 countries, cutting across academic, geographic, and socio-economic boundaries.",
-              "Provided free, high-quality training on conducting, publishing, and critically engaging with entrepreneurship research.",
-              "Connected early-stage researchers with leading global scholars, journal editors, and established academics in the field.",
-              "Fostered an inclusive, diverse research community committed to strengthening entrepreneurship as a field of inquiry.",
-              "Contributed to making research knowledge more accessible, especially for scholars from emerging and underrepresented regions.",
-            ].map((text, idx) => (
-              <li key={idx}>
-                <AnimatedText text={text} />
-              </li>
-            ))}
-          </ul>
-          <AnimatedText text="VSSER is not just a summer school, it is a growing international ecosystem for aspiring and established entrepreneurship researchers to learn, collaborate, and contribute to advancing knowledge in the discipline." className="text-gray-400 mt-4" />
-          <AnimatedText text="As we celebrate the 5th edition VSSER-25, our impact continues to grow, driven by our mission to make quality entrepreneurship research accessible to all." className="text-gray-400 mt-2" />
-        </section>
-
-        <section>
-          <AnimatedText text="The Man Behind This Revolution" className="text-4xl font-semibold mb-2" />
-          <AnimatedText text="Prof. Vishal Gupta" className="text-3xl font-bold mb-8 text-[#00ff9f]" />
-          <AnimatedText text="At the heart of the Virtual Summer School in Entrepreneurship Research (VSSER) is Prof. Vishal Gupta, a globally respected scholar, educator, and mentor, committed to making entrepreneurship research accessible to aspiring scholars worldwide." className="text-gray-400 mb-4" />
-          <AnimatedText text="Prof. Gupta brings over two decades of academic excellence to VSSER. With more than 100 peer-reviewed journal publications, his research spans some of the most prestigious outlets in the field, including the Academy of Management Journal, Journal of Applied Psychology, Journal of Financial Economics, and the Journal of Management, among others." className="text-gray-400 mb-4" />
-          <AnimatedText text="An expert in strategic management and entrepreneurship, Prof. Gupta’s teaching portfolio extends from undergraduate classrooms to PhD seminars, with students and scholars benefiting from his expertise across the United States, India, and Bahrain. His global outlook and dedication to scholarly capacity-building inspired the launch of VSSER in 2021—a free, inclusive platform that has already impacted over 1,000 participants from 35+ countries." className="text-gray-400 mb-4" />
-          <AnimatedText text="Beyond academia, Prof. Gupta is a sought-after professional speaker, delivering impactful sessions for students, business executives, and small business owners on career advancement, entrepreneurship, and research excellence." className="text-gray-400" />
-        </section>
-
-      </div>
-    </div>
+    <motion.section
+      ref={ref}
+      variants={sectionVariant}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      className={`relative ${className}`}
+    >
+      {children}
+    </motion.section>
   );
 };
 
-export default VSSERAbout;
+const GDCAbout = () => (
+  <div className="relative z-10 w-full bg-[#02050a] min-h-screen">
+    
+    <div className="absolute inset-0 bg-gradient-to-br from-[#02050a] via-[#0a0f1a] to-[#02050a] opacity-50" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,159,0.03),transparent_50%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,159,0.02),transparent_50%)]" />
+    
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      className="relative max-w-6xl mx-auto px-6 py-16 text-white"
+    >
+      
+      <AnimatedSection className="mb-20">
+        <div className="relative">
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="absolute -top-2 left-0 h-0.5 bg-gradient-to-r from-[#00ff9f] to-transparent"
+          />
+          <AnimatedText 
+            text="At GDC, we believe that talent is universal, but access to academic credibility, guided mentorship, and meaningful publishing opportunities is not. Our platform exists to correct that imbalance. Through a curated ecosystem of coaching programs, research guidance, academic publishing, and global thought-leadership training, we aim to shape future-ready student leaders equipped for Ivy League admissions, competitive postgraduate scholarships, and impactful global careers." 
+            className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light tracking-wide"
+          />
+        </div>
+      </AnimatedSection>
+
+      
+      <div className="space-y-16">
+        <AnimatedSection className="group">
+          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
+            />
+            <AnimatedText 
+              text="1. Creating Equitable Pathways to Global Competence" 
+              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
+            />
+            <div className="space-y-4">
+              <AnimatedText 
+                text="We aim to open pathways for undergraduate students particularly those from tier-2 and tier-3 cities, underserved academic institutions, and non-traditional backgrounds who aspire to careers in global diplomacy, international development, and public policy but lack the access to guided preparation, research mentorship, and publishing platforms." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+              <AnimatedText 
+                text="Our platform levels the playing field by offering structured opportunities for:" 
+                className="text-lg text-gray-400 mt-6 mb-4"
+              />
+              <div className="grid gap-3">
+                {[
+                  "Participating in faculty-mentored coaching in diplomacy and IR;",
+                  "Publishing research through a peer-reviewed student journal;",
+                  "Developing public voices via op-eds and essays on our global media platform;",
+                  "Engaging in peer simulations and public speaking forums;",
+                  "Building compelling academic and leadership portfolios for postgraduate applications."
+                ].map((text, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                    className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-[#00ff9f]/5 to-transparent hover:from-[#00ff9f]/10 transition-colors duration-300"
+                  >
+                    <div className="w-2 h-2 bg-[#00ff9f] rounded-full mt-3 flex-shrink-0" />
+                    <AnimatedText text={text} className="text-gray-400 text-lg" />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="group">
+          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
+            />
+            <AnimatedText 
+              text="2. Fostering Research and Intellectual Rigor" 
+              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
+            />
+            <div className="space-y-4">
+              <AnimatedText 
+                text="We aim to embed rigorous, ethical, and globally benchmarked academic values in students early in their intellectual journey. In an increasingly credential-driven world, GDC provides students with tangible markers of excellence such as publications in journals, media platforms, and research presentations." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+              <AnimatedText 
+                text="By enabling research mentorship, fostering journal publication, and guiding Scopus-indexed writing, we ensure that students graduate with a body of work that signals seriousness and scholarly integrity, credentials often missing in traditional undergraduate frameworks." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="group">
+          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
+            />
+            <AnimatedText 
+              text="3. Bridging the Classroom and the Real World" 
+              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
+            />
+            <div className="space-y-4">
+              <AnimatedText 
+                text="While classroom education builds foundational knowledge, GDC aims to build applied global competence. Our model blends academic preparation with practice-based learning. From workshops on negotiation and diplomacy to media literacy, policy writing, and leadership simulations our programs help students develop the confidence and voice needed to engage with real-world issues." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+              <AnimatedText 
+                text="We aim to train students not just for exams, but for international conferences, policy internships, admissions interviews, and thought-leadership platforms." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="group">
+          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
+            />
+            <AnimatedText 
+              text="4. Elevating Student Voices in Global Discourse" 
+              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
+            />
+            <div className="space-y-4">
+              <AnimatedText 
+                text="A key aim of GDC is to democratize knowledge production and elevate youth voices that are often excluded from mainstream policy and academic dialogue. Through our India and Europe-focused digital media platforms, we invite students to contribute perspectives, debates, and commentary on global issues whether it is climate change, international security, or development diplomacy." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+              <AnimatedText 
+                text="By creating space for student writing to be published, reviewed, and disseminated, we aim to give young thinkers not only visibility but also credibility and impact." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="group">
+          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
+            />
+            <AnimatedText 
+              text="5. Building a Community of Scholars and Mentors" 
+              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
+            />
+            <div className="space-y-4">
+              <AnimatedText 
+                text="Finally, we aim to create a sustainable community of scholars, mentors, advisors, and alumni who support each other's growth. Through our mentorship programs, editorial collaborations, workshops, and events, we envision a vibrant network that grows with each cohort and fuels new collaborations in research, diplomacy, and global leadership." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+              <AnimatedText 
+                text="We aim for GDC to be more than a platform it should be a lifelong academic and professional ecosystem." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+            </div>
+          </div>
+        </AnimatedSection>
+
+        
+        <AnimatedSection className="relative mt-20">
+          <div className="relative p-8 rounded-2xl bg-gradient-to-r from-[#00ff9f]/5 via-transparent to-[#00ff9f]/5 border border-[#00ff9f]/20">
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: 0.3 }}
+              className="absolute top-0 left-0 h-0.5 bg-gradient-to-r from-[#00ff9f] to-transparent rounded-full"
+            />
+            <AnimatedText 
+              text="In Summary" 
+              className="text-3xl md:text-4xl font-bold mb-8 text-white"
+            />
+            <AnimatedText 
+              text="GDC's aim is to co-create futures: to equip students with the knowledge, mentorship, credentials, and voice they need to navigate, shape, and lead in the world of diplomacy and global policy. In doing so, we intend not only to transform individual student journeys, but also to contribute to a more inclusive and intellectually diverse global leadership pipeline rooted in India, but built for the world." 
+              className="text-lg md:text-xl text-gray-300 leading-relaxed font-light"
+            />
+          </div>
+        </AnimatedSection>
+      </div>
+    </motion.div>
+  </div>
+);
+
+export default GDCAbout;
