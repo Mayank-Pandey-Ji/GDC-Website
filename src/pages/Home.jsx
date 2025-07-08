@@ -11,6 +11,7 @@ import Header from "../components/Header"
 import SiteFAQs from "../components/SiteFAQs"
 import ContactUs from "../components/ContactUs"
 import VSSERAbout from "../components/VSSERAbout"
+import Values from "./Values.jsx"
 const Home = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const Home = () => {
     <ProgramDetails />
     <VideoTestimonials />
     <TestimonialCarousel />
+    <Values />
     <SiteFAQs />
     <ContactUs />
   </>
