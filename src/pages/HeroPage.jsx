@@ -1,59 +1,70 @@
-// /pages/HeroPage.jsx
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const HeroPage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const goToAbout = () => {
     navigate('/about');
   };
-  return (
-    <section id="hero">
-      <div className="w-full relative h-[100vh] z-10 bg-[#02050a]">
-        <img
-          src="/hero_bg.png"
-          alt="Hero Background"
-          className="absolute top-0 left-0 w-full h-full sm:h-auto sm:relative sm:object-none object-cover object-center -z-10"
-        />
 
-        <div className="absolute top-0 left-0 right-0 h-full flex flex-col items-center justify-center px-6 sm:px-10 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tighter tracking-tighter text-white max-w-3xl">
-            From Theory to {" "}
-            <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic">
-             Application - Skill Building
-            </span>{" "}
-            Summer School
-          </h1>
-          <h2 className="text-[#aff7dc] font-semibold py-6 tracking-wider leading-tight max-w-3xl text-base sm:text-lg">
-            Transform academic knowledge into practical skills with expert-led
-            courses, hands-on experience, and mentorship designed to prepare you
-            for success as a professional Researcher.
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 items-center text-white">
-            <button onClick={goToAbout} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
-            Apply now
-          </button>
-            {/* <span className="text-sm sm:text-base font-semibold px-6 w-xs text-center">
-              🟢 C5 is ongoing. Enrollment for C6 is live.
-            </span> */}
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3 pt-10 ">
-            <div className="w-sm rounded-xl border-2 border-[#00ff9f] bg-[#02050a] flex flex-col px-7 py-5 items-baseline justify-center gap-y-2">
-              <span className="text-[#00ff9f] text-sm font-bold">
-                Next Cohort
-              </span>
-              <span className="text-white font-bold">2026</span>
-            </div>
-            <div className="w-sm rounded-xl border-2 border-[#00ff9f] bg-[#02050a] flex flex-col px-7 py-5 items-baseline justify-center gap-y-2">
-              <span className="text-[#00ff9f] text-sm font-bold">
-                Enrollment
-              </span>
-              <span className="text-white font-bold">Live now</span>
-            </div>
-          </div>
-        </div>
+  const [contentVisible, setContentVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setContentVisible(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <section
+      id="hero"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]" 
+    >
+      {/* Background Image*/}
+      <img
+        src="https://bocconsultingpro.com/images/detail_service5.jpg"
+        alt="Global Diplomacy Network Background"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-30 animate-zoom-in" 
+      />
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      {/* Content Container */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-6 sm:px-10 text-center max-w-4xl mx-auto py-20">
+        <h1
+          className={`text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white mb-6
+            transform transition-all duration-1000 ease-out ${
+            contentVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic block">
+            Navigating Complexities.
+          </span>
+          <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic block">
+            Forging Alliances.
+          </span>
+          <span className="text-[#1cefa2] block mt-4">
+            Global Diplomacy Consulting.
+          </span>
+        </h1>
+
+        <p
+          className={`mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mb-10
+            transform transition-all duration-1000 delay-300 ease-out ${
+            contentVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          At GDC, we empower organizations and governments to thrive in the intricate world of international relations. We bridge divides, build consensus, and deliver strategic insights for a connected future.
+        </p>
+
+        <button
+          onClick={goToAbout}
+          className={`bg-[#27d587] hover:bg-[#5fc094] text-white hover:text-white font-semibold py-4 px-12 rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl text-lg
+            ${contentVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+        >
+          Discover Our Expertise
+        </button>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroPage
+export default HeroPage;
