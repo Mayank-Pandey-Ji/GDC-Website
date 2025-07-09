@@ -1,16 +1,25 @@
+import {
+  FaWpforms,
+	FaComments,
+	FaCheckCircle,} from "react-icons/fa"
+
+
 const HowToGetIn = () => {
   const steps = [
     {
+      icon:FaWpforms,
       number: "1",
       title: "Online Application (10 minutes)",
       desc: "Fill in an application with your details. It also includes taking a video."
     },
-    {
+    { 
+      icon : FaComments,
       number: "2",
       title: "Group Call (60 minutes)",
       desc: "If required, some applicants will need to book a 1:1 session to see if we're a mutual fit."
     },
-    {
+    { 
+      icon:FaCheckCircle,
       number: "3",
       title: "Decision",
       desc: "Receive your decision by email (keep checking your spam). We accept only 20 members in each cohort."
@@ -27,8 +36,9 @@ const HowToGetIn = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => (
             <div key={index} className="bg-gradient-to-br from-[#0f1722] to-[#02050a] p-8 rounded-2xl shadow-2xl hover:shadow-orange-900/20 transition-all hover:scale-105 border border-gray-500 text-center">
-              <div className="w-16 h-16 border-2 border-gray-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-green-300">{step.number}</span>
+              <div className="w-16 h-16 border-2 border-green-300 rounded-full flex items-center justify-center mx-auto mb-6">
+                {/* <span className="text-3xl font-bold text-green-300">{step.number}</span> */}
+                <step.icon className="text-3xl text-green-300" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
               <p className="text-gray-400 leading-relaxed">{step.desc}</p>

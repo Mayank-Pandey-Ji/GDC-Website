@@ -4,7 +4,8 @@ import {
   FaBookOpen,
   FaLightbulb,
   FaUniversity,
-  FaNetworkWired
+  FaNetworkWired,
+  FaVideo
 } from "react-icons/fa";
 
 const visionFeatures = [
