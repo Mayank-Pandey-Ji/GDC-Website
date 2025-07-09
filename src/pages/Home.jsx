@@ -11,12 +11,14 @@ import Header from "../components/Header"
 import SiteFAQs from "../components/SiteFAQs"
 import ContactUs from "../components/ContactUs"
 import VSSERAbout from "../components/VSSERAbout"
+import VisionSection from "../pages/VisionSection"
 import Values from "./Values.jsx"
 const Home = () => {
   return (
     <>
     <Header />
     <HeroPage />
+   
     <VSSERAbout/>
     <OnlineCohort />
     <ProgramFeatures />
@@ -24,6 +26,7 @@ const Home = () => {
     <HowToGetIn />
     <ProgramDetails />
     <VideoTestimonials />
+     <VisionSection />
     <TestimonialCarousel />
     <Values />
     <SiteFAQs />
