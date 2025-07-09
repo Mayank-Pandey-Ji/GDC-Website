@@ -1,9 +1,9 @@
 // /pages/OnlineCohort.jsx
 
-// work by Haswanth Tamil
+// ********************* work by Haswanth Tamil ******************************
 
 import React, { useState } from "react"
-// eslint-disable-next-line no-unused-vars
+// // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import CohortCard from "../components/CohortCard.jsx"
@@ -44,7 +44,7 @@ const IMAGES_PER_SLIDE = 3
 
 const OnlineCohort = () => {
   const [page, setPage] = useState(0)
-   const navigate = useNavigate()
+  const navigate = useNavigate()
   const goToAbout = () => {
     navigate('/about');
   };
@@ -160,7 +160,7 @@ const OnlineCohort = () => {
                   <motion.img
                     key={src}
                     src={src}
-                    alt={`Slide ${idx}`}
+                    alt={Slide ${idx}}
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
@@ -180,7 +180,7 @@ const OnlineCohort = () => {
           </div>
 
           {/* Dots */}
-          {/* <div className="flex justify-center mt-4 gap-2">
+        {/* <div className="flex justify-center mt-4 gap-2">
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
                 key={i}
@@ -192,16 +192,18 @@ const OnlineCohort = () => {
             ))}
           </div> */}
         {/* </div> */}
-      </section>
+      // </section>
+
       <section className="bg-[#09101a] text-white py-10 px-2">
         <div className="flex flex-col items-center justify-center text-center w-full gap-y-4">
-          <span className="font-bold text-lg text-[#84efac]">How it works</span>
+          {/* <span className="font-bold text-lg text-[#84efac]">How it works</span> */}
           <span className="text-4xl font-bold">
-            What does the cohort look like?
+            Objectives of Global Diplomacy Consulting (GDC)
           </span>
           <span className="font-bold text-lg text-[#84efac]">
-            Our Academy takes you on a step-by-step journey from foundational
-            skills to mastering real-world research:
+            The objectives of GDC are framed to guide the platform’s growth, output, and institutional effectiveness in a phased and focused manner. These objectives translate GDC’s broader values and ambitions into concrete, measurable, and time-bound goals that support long-term impact and operational success.
+            Each objective below is mapped to a strategic function of the organization, ensuring that GDC evolves as a results-oriented, adaptive, and mission-driven platform.
+
           </span>
         </div>
         <div className="w-full bg-[#09101a] px-15 py-10">
@@ -210,10 +212,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-1 sm:row-start-1 bg-[#09101a] rounded shadow">
               <CohortCard
                 id={1}
-                title="Foundation"
+                title="To Establish a Multi-Vertical Ecosystem within the First 24 Months"
                 desc={[
-                  "✦ Develop essential practical skills",
-                  "✦ Learn the traits of an effective researcher",
+                  "We aim to fully operationalise all core service verticals including certified courses, research mentorship, the media platform, academic journal, and the annual research conference, within two academic cycles. Each vertical will be launched with its own syllabus, operational workflows, performance metrics, and digital interface.",
                 ]}
               />
             </div>
@@ -222,10 +223,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-2 sm:row-start-2 bg-[#09101a] rounded shadow">
               <CohortCard
                 id={2}
-                title="Case Mastery"
+                title="To Develop and Implement a Comprehensive Editorial Framework"
                 desc={[
-                  "✦ Master the art of history-taking and case formulation",
-                  "✦ Gain proficiency in key research frameworks and techniques",
+                  "We will design an editorial governance structure that ensures the academic rigor, originality, and ethical integrity of all GDC publications. This includes editorial boards for both the student journal and media platform, a double-blind review system, author mentoring protocols, and clear citation/anti-plagiarism guidelines.",
                 ]}
               />
             </div>
@@ -234,10 +234,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-1 sm:row-start-3 bg-[#09101a] rounded shadow">
               <CohortCard
                 id={3}
-                title="Research and Demonstrations"
+                title="To Launch a Pan-India Outreach Campaign to Build Brand Recognition"
                 desc={[
-                  "✦ Dive into dynamic research techniques",
-                  "✦ Learn to present, analyze, and formulate researched work with clarity",
+                  "To position GDC nationally, we will roll out a structured institutional outreach campaign targeting universities, liberal arts colleges, and policy schools across India. This will include informational sessions, strategic partnerships, speaking engagements, campus ambassadors, and participation in youth festivals and conferences.",
                 ]}
               />
             </div>
@@ -246,10 +245,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-2 sm:row-start-4 bg-[#09101a] rounded shadow">
               <CohortCard
                 id={4}
-                title="Mastering Online research"
+                title="To Formalize Strategic Partnerships with Global and Domestic Institutions"
                 desc={[
-                  "✦ Conduct effective research in virtual environments",
-                  "✦ Develop confidence in using digital tools and platforms for seamless client interactions",
+                  "We will prioritize formal tie-ups with policy think tanks, media platforms, universities, and embassies to enhance GDC’s credibility and reach. These partnerships will focus on co-hosted events, shared content, publication support, faculty exchange, and internship pipelines.",
                 ]}
               />
             </div>
@@ -258,10 +256,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-1 sm:row-start-5 bg-[#09101a] rounded shadow">
               <CohortCard
                 id={5}
-                title={"1:1 Mock Sessions"}
+                title={"To Design a Modular Learning and Certification Framework"}
                 desc={[
-                  "✦ Practice diverse research modalities in simulated environments",
-                  "✦ Build confidence with real-world applications.",
+                  "GDC will design a flexible course structure allowing students to progress through micro-credentials (modules) that lead to larger certifications in diplomacy and international affairs. Courses will include both synchronous and asynchronous content, verified assessments, and digital credentials.",
                 ]}
               />
             </div>
@@ -270,10 +267,19 @@ const OnlineCohort = () => {
             <div className="sm:col-start-2 sm:row-start-6 bg-[#09101a] rounded shadow">
               <CohortCard
                 id={6}
-                title="Graduation 🎓"
+                title="To Develop an Alumni & Mentorship Network for Long-Term Impact"
                 desc={[
-                  "✦ Celebrate your growth and readiness to thrive professionally.",
-                  "✦ Step into the field equipped to thrive and make a meaningful impact",
+                  "GDC will create an alumni tracking and mentoring system that allows previous cohorts to stay involved as reviewers, panellists, guest lecturers, or peer mentors. This will foster cross-cohort learning and extend GDC’s impact far beyond course durations.",
+                ]}
+              />
+            </div>
+            {/* Row 6, Col 2 */}
+            <div className="sm:col-start-1 sm:row-start-7 bg-[#09101a] rounded shadow">
+              <CohortCard
+                id={7}
+                title="To Publish a Flagship Annual Report Showcasing Youth-Led Diplomacy Research"
+                desc={[
+                  "GDC will curate and publish an annual “State of Youth Diplomacy” report highlighting the top student-authored papers, essays, and commentary submitted to the platform. This publication will be distributed to media houses, embassies, universities, and policymakers to signal the quality of GDC’s intellectual ecosystem.",
                 ]}
               />
             </div>
