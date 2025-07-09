@@ -12,6 +12,7 @@ import SiteFAQs from "../components/SiteFAQs"
 import ContactUs from "../components/ContactUs"
 import VSSERAbout from "../components/VSSERAbout"
 import VisionSection from "../pages/VisionSection"
+import Values from "./Values.jsx"
 const Home = () => {
   return (
     <>
@@ -27,6 +28,7 @@ const Home = () => {
     <VideoTestimonials />
      <VisionSection />
     <TestimonialCarousel />
+    <Values />
     <SiteFAQs />
     <ContactUs />
   </>
