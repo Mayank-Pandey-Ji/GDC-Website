@@ -9,6 +9,10 @@ export default function Header() {
   const goToArticle = () => {
     navigate('/articles');
   };
+
+   const goToHome = () => {
+    navigate('/');
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -25,9 +29,9 @@ export default function Header() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-10 py-2 text-white flex justify-between items-center">
-        <h1 className="font-bold font-serif">
-          GDC 
-        </h1>
+        <button onClick={goToHome} className="rounded-lg text-lg  hover:cursor-pointer font-bold hover:text-xl transition-all duration-300 ease-out">
+            GDC
+          </button>
         <nav className="space-x-6 flex gap-2">
           <button onClick={goToArticle} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
             Articles
