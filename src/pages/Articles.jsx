@@ -37,7 +37,7 @@ const articles = [
 
 const Articles = () => {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-[#09101a] min-h-screen text-white">
       <div className="py-10 flex justify-end pr-6 sm:px-8 md:px-12 lg:px-20">
         <h1 className="text-green-400 text-[48px] sm:text-[72px] md:text-[96px] lg:text-[120px] font-bold leading-none tracking-tight text-center md:text-right" 
         style={{ 

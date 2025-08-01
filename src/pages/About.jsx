@@ -10,7 +10,7 @@ const About = () => {
       {step === 0 && (
         <div className="text-center space-y-4">
           <h2 className="text-xl">Hello hello 👋</h2>
-          <h1 className="text-2xl font-semibold">Welcome to Rocket Academy 🚀</h1>
+          <h1 className="text-2xl font-semibold">Welcome to GDC 🚀</h1>
           <p className="text-lg">Please fill in the following questions, to help us know you better.</p>
           <button
             onClick={nextStep}
@@ -167,7 +167,7 @@ const About = () => {
 
       {step === 10 && (
         <div className="text-center space-y-4 w-full max-w-xl">
-          <label className="text-lg font-semibold">9 → Is this the first time you are applying at Rocket Health/ Rocket Academy?*</label>
+          <label className="text-lg font-semibold">9 → Is this the first time you are applying at GDC?*</label>
           <div className="space-y-2">
             {['Yes', 'No, I have applied Before'].map((option, index) => (
               <div

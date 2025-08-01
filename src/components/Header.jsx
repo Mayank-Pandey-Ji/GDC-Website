@@ -6,6 +6,9 @@ export default function Header() {
   const goToAbout = () => {
     navigate('/about');
   };
+  const goToArticle = () => {
+    navigate('/articles');
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -18,14 +21,17 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-colors duration-500 ${
-        isScrolled ? "bg-[#141c27cc] bg-opacity-80" : "bg-[#09101a]"
+        isScrolled ? "bg-[#141c27cc] bg-opacity-80" : "bg-[#0d1a2c]"
       }`}
     >
       <div className="max-w-6xl mx-auto px-10 py-2 text-white flex justify-between items-center">
         <h1 className="font-bold font-serif">
           GDC 
         </h1>
-        <nav className="space-x-6">
+        <nav className="space-x-6 flex gap-2">
+          <button onClick={goToArticle} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
+            Articles
+          </button>
           <button onClick={goToAbout} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
             Apply now
           </button>
