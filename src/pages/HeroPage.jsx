@@ -38,14 +38,11 @@ const HeroPage = () => {
             }`}
         >
           <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic block">
-            Navigating Complexities.
+            International Relations & Global Diplomacy Consulting 
           </span>
-          <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic block">
-            Forging Alliances.
-          </span>
-          <span className="text-[#1cefa2] block mt-4">
-            Global Diplomacy Consulting.
-          </span>
+          <span className="text-[#1cefa2] block mt-3">
+            IRGDC is not just a platform, it’s a movement
+            </span>
         </h1>
 
         <p
@@ -56,9 +53,7 @@ const HeroPage = () => {
                 : "translate-y-10 opacity-0"
             }`}
         >
-          At GDC, we empower organizations and governments to thrive in the
-          intricate world of international relations. We bridge divides, build
-          consensus, and deliver strategic insights for a connected future.
+          We help students build futures shaped by knowledge, confidence, and global vision
         </p>
 
         <button

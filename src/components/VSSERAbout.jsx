@@ -111,7 +111,10 @@ const GDCAbout = () => (
             className="absolute -top-2 left-0 h-0.5 bg-gradient-to-r from-[#00ff9f] to-transparent"
           />
           <AnimatedText 
-            text="At GDC, we believe that talent is universal, but access to academic credibility, guided mentorship, and meaningful publishing opportunities is not. Our platform exists to correct that imbalance. Through a curated ecosystem of coaching programs, research guidance, academic publishing, and global thought-leadership training, we aim to shape future-ready student leaders equipped for Ivy League admissions, competitive postgraduate scholarships, and impactful global careers." 
+            text="At IRGDC, our aim is to create an accessible and credible platform that empowers students,
+            especially from underserved regions to become globally competent scholars, policy thinkers,
+            and public leaders. We bridge gaps in mentorship, research opportunities, and academic
+             publishing to help students unlock their full potential in diplomacy and international affairs."
             className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light tracking-wide"
           />
         </div>
@@ -129,63 +132,12 @@ const GDCAbout = () => (
               className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
             />
             <AnimatedText 
-              text="1. Creating Equitable Pathways to Global Competence" 
+              text="●	Global Youth Diplomacy Network " 
               className="text-2xl md:text-3xl font-semibold mb-6 text-white"
             />
             <div className="space-y-4">
               <AnimatedText 
-                text="We aim to open pathways for undergraduate students particularly those from tier-2 and tier-3 cities, underserved academic institutions, and non-traditional backgrounds who aspire to careers in global diplomacy, international development, and public policy but lack the access to guided preparation, research mentorship, and publishing platforms." 
-                className="text-lg text-gray-400 leading-relaxed"
-              />
-              <AnimatedText 
-                text="Our platform levels the playing field by offering structured opportunities for:" 
-                className="text-lg text-gray-400 mt-6 mb-4"
-              />
-              <div className="grid gap-3">
-                {[
-                  "Participating in faculty-mentored coaching in diplomacy and IR;",
-                  "Publishing research through a peer-reviewed student journal;",
-                  "Developing public voices via op-eds and essays on our global media platform;",
-                  "Engaging in peer simulations and public speaking forums;",
-                  "Building compelling academic and leadership portfolios for postgraduate applications."
-                ].map((text, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-[#00ff9f]/5 to-transparent hover:from-[#00ff9f]/10 transition-colors duration-300"
-                  >
-                    <div className="w-2 h-2 bg-[#00ff9f] rounded-full mt-3 flex-shrink-0" />
-                    <AnimatedText text={text} className="text-gray-400 text-lg" />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection className="group">
-          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
-            />
-            <AnimatedText 
-              text="2. Fostering Research and Intellectual Rigor" 
-              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
-            />
-            <div className="space-y-4">
-              <AnimatedText 
-                text="We aim to embed rigorous, ethical, and globally benchmarked academic values in students early in their intellectual journey. In an increasingly credential-driven world, GDC provides students with tangible markers of excellence such as publications in journals, media platforms, and research presentations." 
-                className="text-lg text-gray-400 leading-relaxed"
-              />
-              <AnimatedText 
-                text="By enabling research mentorship, fostering journal publication, and guiding Scopus-indexed writing, we ensure that students graduate with a body of work that signals seriousness and scholarly integrity, credentials often missing in traditional undergraduate frameworks." 
+                text="A space where students from across the world connect and collaborate."
                 className="text-lg text-gray-400 leading-relaxed"
               />
             </div>
@@ -202,16 +154,12 @@ const GDCAbout = () => (
               className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
             />
             <AnimatedText 
-              text="3. Bridging the Classroom and the Real World" 
+              text="●	Publishing Powerhouse " 
               className="text-2xl md:text-3xl font-semibold mb-6 text-white"
             />
             <div className="space-y-4">
               <AnimatedText 
-                text="While classroom education builds foundational knowledge, GDC aims to build applied global competence. Our model blends academic preparation with practice-based learning. From workshops on negotiation and diplomacy to media literacy, policy writing, and leadership simulations our programs help students develop the confidence and voice needed to engage with real-world issues." 
-                className="text-lg text-gray-400 leading-relaxed"
-              />
-              <AnimatedText 
-                text="We aim to train students not just for exams, but for international conferences, policy internships, admissions interviews, and thought-leadership platforms." 
+                text="A quality driven platform for student-led research and commentary in global affairs." 
                 className="text-lg text-gray-400 leading-relaxed"
               />
             </div>
@@ -228,22 +176,41 @@ const GDCAbout = () => (
               className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
             />
             <AnimatedText 
-              text="4. Elevating Student Voices in Global Discourse" 
+              text="●	Policy Incubator" 
               className="text-2xl md:text-3xl font-semibold mb-6 text-white"
             />
             <div className="space-y-4">
               <AnimatedText 
-                text="A key aim of GDC is to democratize knowledge production and elevate youth voices that are often excluded from mainstream policy and academic dialogue. Through our India and Europe-focused digital media platforms, we invite students to contribute perspectives, debates, and commentary on global issues whether it is climate change, international security, or development diplomacy." 
-                className="text-lg text-gray-400 leading-relaxed"
-              />
-              <AnimatedText 
-                text="By creating space for student writing to be published, reviewed, and disseminated, we aim to give young thinkers not only visibility but also credibility and impact." 
+                text="A launchpad for socially conscious changemakers and diplomacy-driven ventures."
                 className="text-lg text-gray-400 leading-relaxed"
               />
             </div>
           </div>
         </AnimatedSection>
 
+        <AnimatedSection className="group">
+          <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="absolute -left-2 top-0 w-4 h-4 bg-[#00ff9f] rounded-full shadow-lg shadow-[#00ff9f]/30"
+            />
+            <AnimatedText 
+              text="●	New Model of Diplomacy Education" 
+              className="text-2xl md:text-3xl font-semibold mb-6 text-white"
+            />
+            <div className="space-y-4">
+              <AnimatedText 
+                text="Interactive, research-based, and practice-oriented learning that reflects today’s global challenges." 
+                className="text-lg text-gray-400 leading-relaxed"
+              />
+
+            </div>
+          </div>
+        </AnimatedSection>
+{ /*
         <AnimatedSection className="group">
           <div className="relative pl-8 border-l-2 border-[#00ff9f]/20 hover:border-[#00ff9f]/40 transition-colors duration-500">
             <motion.div
@@ -270,7 +237,9 @@ const GDCAbout = () => (
           </div>
         </AnimatedSection>
 
-        
+        */}
+
+        { /*}
         <AnimatedSection className="relative mt-20">
           <div className="relative p-8 rounded-2xl bg-gradient-to-r from-[#00ff9f]/5 via-transparent to-[#00ff9f]/5 border border-[#00ff9f]/20">
             <motion.div
@@ -290,6 +259,8 @@ const GDCAbout = () => (
             />
           </div>
         </AnimatedSection>
+
+        */}
       </div>
     </motion.div>
   </div>
