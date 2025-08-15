@@ -168,7 +168,7 @@ const OnlineCohort = () => {
             </button>
 
             <div className="flex gap-4 justify-center bg-[#09101a]">
-              <AnimatePresence>
+              <AnimatePresence>// Animate the images
                 {visibleImages.map((src, idx) => (
                   <motion.img
                     key={src}
