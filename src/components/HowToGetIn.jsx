@@ -47,9 +47,9 @@ const HowToGetIn = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-gradient-to-r from-green-600 to-[#55e6a5] hover:from-[#55e6a5] hover:to-green-600 text-[#09101a] font-bold py-4 px-10 rounded-xl text-lg transition-all hover:scale-105 shadow-lg hover:shadow-gray-600 border border-gray-300">
+          {/* <button className="bg-gradient-to-r from-green-600 to-[#55e6a5] hover:from-[#55e6a5] hover:to-green-600 text-[#09101a] font-bold py-4 px-10 rounded-xl text-lg transition-all hover:scale-105 shadow-lg hover:shadow-gray-600 border border-gray-300">
             Apply now
-          </button>
+          </button> */}
           <p className="mt-6 text-gray-400 font-medium text-lg">COHORT WILL STARTS SOON</p>
         </div>
       </div>
