@@ -14,13 +14,13 @@ import cohort2 from "../assets/picture2.jpg"
 
 
 import {
-  FaCubes,
-  FaPenNib,
+  FaProjectDiagram,
+  FaEdit,
   FaBullhorn,
   FaHandshake,
-  FaGraduationCap,
-  FaUsers,
-  FaBookOpen,
+  FaLayerGroup,
+  FaUserFriends,
+  FaChartLine,
 } from "react-icons/fa";
 
 
@@ -168,7 +168,7 @@ const OnlineCohort = () => {
             </button>
 
             <div className="flex gap-4 justify-center bg-[#09101a]">
-              <AnimatePresence>
+              <AnimatePresence> 
                 {visibleImages.map((src, idx) => (
                   <motion.img
                     key={src}
@@ -224,8 +224,11 @@ const OnlineCohort = () => {
             {/* Row 1, Col 1 */}
             <div className="sm:col-start-1 sm:row-start-1 bg-[#09101a] rounded shadow">
               <CohortCard
-                icons={FaCubes}
+
+                icons={FaProjectDiagram}
+               
                 title="Launch Core Verticals (Year 1–2):"
+
                 desc={[
                   "Certified courses, research mentorship, media platform, academic journal, and annual conference",
                 ]}
@@ -235,7 +238,9 @@ const OnlineCohort = () => {
             {/* Row 2, Col 2 */}
             <div className="sm:col-start-2 sm:row-start-2 bg-[#09101a] rounded shadow">
               <CohortCard
-                icons={FaPenNib}
+
+                icons={FaEdit}
+                
                 title="Editorial Integrity:"
                 desc={[
                   "Establish a robust editorial process with double-blind reviews, plagiarism checks, and academic mentoring.",
@@ -268,7 +273,7 @@ const OnlineCohort = () => {
             {/* Row 5, Col 1 */}
             <div className="sm:col-start-1 sm:row-start-5 bg-[#09101a] rounded shadow">
               <CohortCard
-                icons={FaGraduationCap}
+                icons={FaLayerGroup}
                 title={"Modular Certification:"}
                 desc={[
                   "Offer flexible, stackable learning modules leading to diplomas in diplomacy and international affairs.",
@@ -279,7 +284,7 @@ const OnlineCohort = () => {
             {/* Row 6, Col 2 */}
             <div className="sm:col-start-2 sm:row-start-6 bg-[#09101a] rounded shadow">
               <CohortCard
-                icons = {FaUsers}
+                icons = {FaUserFriends}
                 title="Alumni & Mentorship Network:"
                 desc={[
                   "Connect past cohorts with current ones through mentorship, guest talks, and advisory roles.",
@@ -289,7 +294,7 @@ const OnlineCohort = () => {
             {/* Row 7, Col 2 */}
             <div className="sm:col-start-1 sm:row-start-7 bg-[#09101a] rounded shadow">
               <CohortCard
-                icons ={FaBookOpen}
+                icons ={FaChartLine}
                 title="Annual Youth Diplomacy Report:"
                 desc={[
                   "Highlight top student work in an annual publication shared with global institutions.",

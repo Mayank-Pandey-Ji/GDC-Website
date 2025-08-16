@@ -2,10 +2,10 @@ import React from 'react';
 import valueImage from '../assets/value-image.jpg';
 import {
   FaBrain,
-  FaGlobe,
+  FaGlobeAmericas,
   FaBalanceScale,
-  FaUsers,
-  FaHandshake
+  FaUserGraduate,
+  FaComments
 } from "react-icons/fa";
 
 const valueItems = [
@@ -15,7 +15,7 @@ const valueItems = [
       "At Global Diplomacy Consulting, we are guided by the belief that ethical global engagement begins with intellectual humility, intercultural sensitivity, and a deep commitment to critical inquiry.",
   },
   {
-    icon: FaGlobe,
+    icon: FaGlobeAmericas,
     text:
       "We value the practice of diplomacy not merely as negotiation between states, but as a mindset of listening across difference, thinking beyond borders, and acting with responsibility toward future generations.",
   },
@@ -25,12 +25,12 @@ const valueItems = [
       "Our work is anchored in transparency, reflective learning, and the cultivation of environments where diverse worldviews are respected, challenged, and synthesised.",
   },
   {
-    icon: FaUsers,
+    icon: FaUserGraduate,
     text:
       "These values shape how we teach, publish, collaborate, and grow, with the goal of fostering globally aware, socially rooted, and intellectually agile citizens.",
   },
   {
-    icon: FaHandshake,
+    icon: FaComments,
     text:
       "We believe in fostering learning environments that are grounded in empathy, open dialogue, and mutual respect to build truly global citizenship.",
   },

@@ -1,40 +1,40 @@
 import React from "react";
 import {
-  FaGlobe,
-  FaBookOpen,
-  FaLightbulb,
-  FaUniversity,
-  FaNetworkWired,
-  FaVideo
+  FaUsers,
+  FaPenFancy,
+  FaHandsHelping,
+  FaGraduationCap,
+  FaBalanceScale,
+  FaHandshake
 } from "react-icons/fa";
 
 const visionFeatures = [
   {
-    icon: FaGlobe,
+    icon: FaUsers,
     title: "A Global Place for Young Diplomats",
     description:
       "We aim to connect student leaders across Asia, Africa, the Americas, and Europe—creating a space for diverse voices to collaborate and lead. With global partnerships, GDC will become a recognized name in cross-border dialogue and academic cooperation.",
   },
   {
-    icon: FaBookOpen,
+    icon: FaPenFancy,
     title: "A Platform for Student Writers",
     description:
       "GDC will publish high-quality, student-led research—journals, reports, books, and digital content. We bridge the gap between youth ideas and formal scholarship, helping young writers influence real-world policy and academic thought.",
   },
   {
-    icon: FaLightbulb,
+    icon: FaHandsHelping,
     title: "Support for Young Changemakers",
     description:
       "We support students through fellowships, residencies, and incubation programs—turning bold ideas into real-world projects, campaigns, and solutions rooted in justice and cooperation.",
   },
   {
-    icon: FaUniversity,
+    icon: FaGraduationCap,
     title: "A New Way to Learn Diplomacy",
     description:
       "GDC promotes a modern, hands-on model of diplomacy education—using projects, teamwork, and writing to prepare students for global challenges.",
   },
   {
-    icon: FaNetworkWired,
+    icon: FaBalanceScale,
     title: "Fair and Inclusive Leadership",
     description:
       "We focus on leadership from the Global South, ensuring diverse youth voices shape the future of diplomacy, knowledge, and cooperation worldwide.",
