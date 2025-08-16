@@ -35,9 +35,9 @@ const ProgramDetails = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-gradient-to-r  from-green-600 to-[#55e6a5] hover:from-[#55e6a5] hover:to-green-600 text-[#09101a] font-bold py-4 px-10 rounded-xl text-lg transition-all hover:scale-105 shadow-lg hover:shadow-gray-600 border border-gray-400 mb-6">
+          {/* <button className="bg-gradient-to-r  from-green-600 to-[#55e6a5] hover:from-[#55e6a5] hover:to-green-600 text-[#09101a] font-bold py-4 px-10 rounded-xl text-lg transition-all hover:scale-105 shadow-lg hover:shadow-gray-600 border border-gray-400 mb-6">
             Apply now
-          </button>
+          </button> */}
           <p className="text-gray-300 leading-relaxed">Please take moment to answer the questions; we use these to assess whether you're a good fit!</p>
         </div>
       </div>
