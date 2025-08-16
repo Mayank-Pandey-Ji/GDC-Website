@@ -9,11 +9,11 @@ const CohortCard = ({ icons: Icon, title, desc }) => {
         <div className="w-12 h-12 bg-[#0f1722] border-2 border-[#00ff9f] rounded-full flex items-center justify-center">
           <Icon className="text-[#00ff9f] text-xl" />
         </div>
-        <span className="font-serif font-bold text-2xl">{title}</span>
+        <span className="font-serif font-bold text-3xl">{title}</span>
       </div>
       <div className="flex flex-col w-full">
         {desc.map((line, i) => (
-          <p key={i} className="whitespace-normal">{line}</p>
+          <p key={i} className="whitespace-normal text-[1.2rem]">{line}</p>
         ))}
       </div>
     </div>

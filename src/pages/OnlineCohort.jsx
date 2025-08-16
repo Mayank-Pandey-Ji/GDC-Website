@@ -99,9 +99,9 @@ const OnlineCohort = () => {
         </div>
 
         <div className="flex flex-col w-full items-center justify-center py-5 gap-y-3 px-4">
-          <button onClick={goToAbout} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
+          {/* <button onClick={goToAbout} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
             Apply now
-          </button>
+          </button> */}
 
           <span className="text-white font-semibold text-sm md:text-base">
             COHORT WILL START  SSON
@@ -224,10 +224,13 @@ const OnlineCohort = () => {
             {/* Row 1, Col 1 */}
             <div className="sm:col-start-1 sm:row-start-1 bg-[#09101a] rounded shadow">
               <CohortCard
+
                 icons={FaProjectDiagram}
-                title="To Establish a Multi-Vertical Ecosystem within the First 24 Months"
+               
+                title="Launch Core Verticals (Year 1–2):"
+
                 desc={[
-                  "We aim to fully operationalise all core service verticals including certified courses, research mentorship, the media platform, academic journal, and the annual research conference, within two academic cycles. Each vertical will be launched with its own syllabus, operational workflows, performance metrics, and digital interface.",
+                  "Certified courses, research mentorship, media platform, academic journal, and annual conference",
                 ]}
               />
             </div>
@@ -235,10 +238,12 @@ const OnlineCohort = () => {
             {/* Row 2, Col 2 */}
             <div className="sm:col-start-2 sm:row-start-2 bg-[#09101a] rounded shadow">
               <CohortCard
+
                 icons={FaEdit}
-                title="To Develop and Implement a Comprehensive Editorial Framework"
+                
+                title="Editorial Integrity:"
                 desc={[
-                  "We will design an editorial governance structure that ensures the academic rigor, originality, and ethical integrity of all GDC publications. This includes editorial boards for both the student journal and media platform, a double-blind review system, author mentoring protocols, and clear citation/anti-plagiarism guidelines.",
+                  "Establish a robust editorial process with double-blind reviews, plagiarism checks, and academic mentoring.",
                 ]}
               />
             </div>
@@ -247,9 +252,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-1 sm:row-start-3 bg-[#09101a] rounded shadow">
               <CohortCard
                 icons={FaBullhorn}
-                title="To Launch a Pan-India Outreach Campaign to Build Brand Recognition"
+                title="Nationwide Outreach:"
                 desc={[
-                  "To position GDC nationally, we will roll out a structured institutional outreach campaign targeting universities, liberal arts colleges, and policy schools across India. This will include informational sessions, strategic partnerships, speaking engagements, campus ambassadors, and participation in youth festivals and conferences.",
+                  " Build awareness through partnerships, events, student ambassadors, and campus campaigns.",
                 ]}
               />
             </div>
@@ -258,9 +263,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-2 sm:row-start-4 bg-[#09101a] rounded shadow">
               <CohortCard
                 icons={FaHandshake}
-                title="To Formalize Strategic Partnerships with Global and Domestic Institutions"
+                title="Global Partnerships:"
                 desc={[
-                  "We will prioritize formal tie-ups with policy think tanks, media platforms, universities, and embassies to enhance GDC’s credibility and reach. These partnerships will focus on co-hosted events, shared content, publication support, faculty exchange, and internship pipelines.",
+                  "Collaborate with universities, think tanks, and embassies for shared events, internships, and publications.",
                 ]}
               />
             </div>
@@ -269,9 +274,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-1 sm:row-start-5 bg-[#09101a] rounded shadow">
               <CohortCard
                 icons={FaLayerGroup}
-                title={"To Design a Modular Learning and Certification Framework"}
+                title={"Modular Certification:"}
                 desc={[
-                  "GDC will design a flexible course structure allowing students to progress through micro-credentials (modules) that lead to larger certifications in diplomacy and international affairs. Courses will include both synchronous and asynchronous content, verified assessments, and digital credentials.",
+                  "Offer flexible, stackable learning modules leading to diplomas in diplomacy and international affairs.",
                 ]}
               />
             </div>
@@ -280,9 +285,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-2 sm:row-start-6 bg-[#09101a] rounded shadow">
               <CohortCard
                 icons = {FaUserFriends}
-                title="To Develop an Alumni & Mentorship Network for Long-Term Impact"
+                title="Alumni & Mentorship Network:"
                 desc={[
-                  "GDC will create an alumni tracking and mentoring system that allows previous cohorts to stay involved as reviewers, panellists, guest lecturers, or peer mentors. This will foster cross-cohort learning and extend GDC’s impact far beyond course durations.",
+                  "Connect past cohorts with current ones through mentorship, guest talks, and advisory roles.",
                 ]}
               />
             </div>
@@ -290,9 +295,9 @@ const OnlineCohort = () => {
             <div className="sm:col-start-1 sm:row-start-7 bg-[#09101a] rounded shadow">
               <CohortCard
                 icons ={FaChartLine}
-                title="To Publish a Flagship Annual Report Showcasing Youth-Led Diplomacy Research"
+                title="Annual Youth Diplomacy Report:"
                 desc={[
-                  "GDC will curate and publish an annual “State of Youth Diplomacy” report highlighting the top student-authored papers, essays, and commentary submitted to the platform. This publication will be distributed to media houses, embassies, universities, and policymakers to signal the quality of GDC’s intellectual ecosystem.",
+                  "Highlight top student work in an annual publication shared with global institutions.",
                 ]}
               />
             </div>
