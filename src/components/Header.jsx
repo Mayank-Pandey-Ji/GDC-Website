@@ -36,6 +36,7 @@ export default function Header() {
           {/* <button onClick={goToArticle} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
             Articles
           </button> */}
+          
           {/* <button onClick={goToAbout} className="bg-[#27d587] hover:bg-[#f0f2f1] hover:text-[#5fc094] rounded-lg py-2 px-4 transition-all duration-300 hover:cursor-pointer">
             Apply now
           </button> */}
