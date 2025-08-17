@@ -66,7 +66,7 @@ const AnimatedSection = ({ children, className = "" }) => {
 };
 
 const GDCAbout = () => (
-  <div className="relative z-10 w-full bg-[#02050a] min-h-screen">
+  <div className="relative z-10 w-full bg-purple-300 min-h-screen">
     
     {/* Background Gradients */}
     <div className="absolute inset-0 bg-gradient-to-br from-[#02050a] via-[#0a0f1a] to-[#02050a] opacity-50" />

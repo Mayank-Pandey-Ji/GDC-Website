@@ -42,14 +42,14 @@ const features = [
 
 const ProgramFeatures = () => {
   return (
-    <section className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-[#09101a]">
+    <section className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-[#FDF4DC]">
       <div className="max-w-7xl mx-auto">
         {/* Header section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#ccb2fb] mb-4">
-            From the basics to mastering real-world therapy.
+          <h1 className="text-4xl font-bold text-[#533A71] mb-4">
+            From the basics to mastering real-world Research.
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-[#A799B7]">
             Join our comprehensive program designed for aspiring researcher
           </p>
         </div>
@@ -59,13 +59,15 @@ const ProgramFeatures = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#0f1722] to-[#02050a] p-8 rounded-xl shadow-2xl hover:shadow-orange-900/20 transition-all hover:scale-105 border border-[#55e6a5]"
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-[#A799B7]/40 transition-all hover:scale-105 border border-[#A799B7]"
             >
-              <div className="w-12 h-12 border-2 border-[#55e6a5] rounded-full flex items-center justify-center mb-6">
-                <feature.icon className="text-[#55e6a5] text-xl" />
+              <div className="w-12 h-12 border-2 border-[#533A71] rounded-full flex items-center justify-center mb-6">
+                <feature.icon className="text-[#533A71] text-xl" />
               </div>
-              <h3 className="text-xl font-bold text-[#ccb2fb] mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.desc}</p>
+              <h3 className="text-xl font-bold text-[#533A71] mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-[#333]">{feature.desc}</p>
             </div>
           ))}
         </div>

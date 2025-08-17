@@ -11,11 +11,7 @@ const testimonials = [
     name: 'Sampurna Nag',
     role: 'Professional Researcher',
     image: '../assets/Sampurna Nag.png',
-    highlights: [
-      'relatable stories',
-      'practical examples',
-      'structured case formulations'
-    ]
+    highlights: ['relatable stories', 'practical examples', 'structured case formulations'],
   },
   {
     rating: 5,
@@ -23,10 +19,7 @@ const testimonials = [
     name: 'Celina Daniel',
     role: 'Professional Researcher',
     image: '../assets/Celina Daniel.png',
-    highlights: [
-      'real-world practice',
-      'perfect launchpad'
-    ]
+    highlights: ['real-world practice', 'perfect launchpad'],
   },
   {
     rating: 5,
@@ -34,12 +27,8 @@ const testimonials = [
     name: 'Angelina Johnson',
     role: 'Professional Researcher',
     image: '../assets/Celina Daniel.png',
-    highlights: [
-      'highly beneficial',
-      'very insightful'
-    ]
-  }
-  // ...other testimonials
+    highlights: ['highly beneficial', 'very insightful'],
+  },
 ];
 
 function highlightText(text, highlights) {
@@ -49,7 +38,7 @@ function highlightText(text, highlights) {
     const regex = new RegExp(`(${phrase})`, 'gi');
     result = result.replace(
       regex,
-      '<span class="bg-[#3aea9b3c] px-1 rounded text-gray-200 font-medium">$1</span>'
+      '<span class="bg-purple-100 px-1 rounded text-purple-700 font-medium">$1</span>'
     );
   });
   return result;
@@ -57,9 +46,11 @@ function highlightText(text, highlights) {
 
 const TestimonialCarousel = () => {
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#09101a] min-h-screen">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">Hear from our members</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          Hear from our members
+        </h2>
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={30}
@@ -71,26 +62,37 @@ const TestimonialCarousel = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="relative bg-gradient-to-br from-[#0f1722] to-[#02050a] rounded-2xl p-1 shadow-lg max-w-2xl mx-auto">
-                <div className="bg-[#10161f] rounded-2xl p-8">
+              <div className="relative bg-gradient-to-br from-purple-50 to-white rounded-2xl p-1 shadow-lg max-w-2xl mx-auto border border-purple-200">
+                <div className="bg-white rounded-2xl p-8">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className={`text-2xl ${i < testimonial.rating ? 'text-green-200' : 'text-gray-700'}`}>★</span>
+                      <span
+                        key={i}
+                        className={`text-2xl ${
+                          i < testimonial.rating ? 'text-purple-500' : 'text-gray-300'
+                        }`}
+                      >
+                        ★
+                      </span>
                     ))}
                   </div>
                   <p
-                    className="text-gray-100 italic mb-6 leading-relaxed"
+                    className="text-gray-700 italic mb-6 leading-relaxed"
                     dangerouslySetInnerHTML={{
                       __html: highlightText(testimonial.quote, testimonial.highlights),
                     }}
                   />
                   <div className="flex items-center mt-4">
-                    <div className="w-12 h-12 rounded-full bg-gray-700 mr-4 overflow-hidden border-2 border-green-400">
-                      <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
+                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-purple-400">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
-                      <p className="font-semibold text-white">{testimonial.name}</p>
-                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-gray-500 text-sm">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>

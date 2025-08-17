@@ -17,15 +17,15 @@ const HeroPage = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#fdf4dc]"
     >
       {/* Background Image */}
-      <img
+      {/* <img
         src="https://bocconsultingpro.com/images/detail_service5.jpg"
         alt="Global Diplomacy Network Background"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-30 animate-zoom-in"
-      />
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      /> */}
+      <div className="absolute inset-0  opacity-50"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 sm:px-10 text-center max-w-4xl mx-auto py-20">
@@ -37,16 +37,16 @@ const HeroPage = () => {
                 : "translate-y-10 opacity-0"
             }`}
         >
-          <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic block">
+          <span className="bg-gradient-to-r from-[#1e0143] to-[#533a71] bg-clip-text text-transparent italic block">
             International Relations & Global Diplomacy Consulting 
           </span>
-          <span className="text-[#ccb2fb] block mt-3">
+          <span className="text-[#533a71] block mt-3">
             IRGDC is not just a platform, it’s a movement
           </span>
         </h1>
 
         <p
-          className={`mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mb-10
+          className={`mt-6 text-lg sm:text-xl text-purple-500 max-w-3xl mb-10
             transform transition-all duration-1000 delay-300 ease-out ${
               contentVisible
                 ? "translate-y-0 opacity-100"
