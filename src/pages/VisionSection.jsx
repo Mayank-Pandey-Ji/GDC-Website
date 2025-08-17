@@ -5,7 +5,6 @@ import {
   FaHandsHelping,
   FaGraduationCap,
   FaBalanceScale,
-  FaHandshake
 } from "react-icons/fa";
 
 const visionFeatures = [
@@ -41,38 +40,41 @@ const visionFeatures = [
   },
 ];
 
-
 const VisionTimelineItem = ({ icon: Icon, title, description, isLast }) => (
-  <div className="relative pl-12 pb-10 border-l border-gray-600">
-    {/* Dot with Icon */}
-    <div className="absolute -left-6 top-1 w-12 h-12 bg-[#0f1722] border-2 border-[#00ff9f] rounded-full flex items-center justify-center z-10">
-      <Icon className="text-[#00ff9f] text-xl" />
+  <div className="relative pl-14 pb-12 border-l border-gray-700">
+    {/* Circle with Icon */}
+    <div className="absolute -left-7 top-1 w-14 h-14 bg-[#0f1722] border-2 border-[#00ff9f] rounded-full flex items-center justify-center z-10 shadow-md">
+      <Icon className="text-[#00ff9f] text-2xl" />
     </div>
 
     {/* Content */}
-    <div className="bg-[#111827] p-6 rounded-lg shadow-lg border border-gray-600 hover:shadow-orange-900/20 transition">
+    <div className="bg-[#111827] p-6 rounded-xl shadow-lg border border-gray-700 hover:border-[#00ff9f]/60 transition">
       <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-400 text-sm">{description}</p>
+      <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
     </div>
 
-    {/* Vertical Line Extender */}
+    {/* Line extender */}
     {!isLast && (
-      <div className="absolute left-[9px] top-14 w-0.5 h-full bg-gray-600"></div>
+      <div className="absolute left-[11px] top-16 w-0.5 h-full bg-gray-700"></div>
     )}
   </div>
 );
 
 const VisionSection = () => {
   return (
-    <section className="min-h-screen py-16 px-20  bg-[#0a0f1a]">
+    <section className="min-h-screen py-16 px-6 md:px-20 bg-[#0a0f1a]">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Vision at Global Diplomacy Consulting
           </h2>
-          <p className="text-lg text-gray-400">
-            At GDC, we want to build a global space where students can learn, lead, and create real change in diplomacy, public policy, and international relations.We believe young people—especially from the Global South—should shape the future through knowledge, teamwork, and bold ideas.
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+            At GDC, we want to build a global space where students can learn,
+            lead, and create real change in diplomacy, public policy, and
+            international relations. We believe young people—especially from the
+            Global South—should shape the future through knowledge, teamwork,
+            and bold ideas.
           </p>
         </div>
 

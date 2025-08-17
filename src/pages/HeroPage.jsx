@@ -27,10 +27,10 @@ const HeroPage = () => {
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      {/* Content Container */}
+      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 sm:px-10 text-center max-w-4xl mx-auto py-20">
         <h1
-          className={`text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white mb-6
+          className={`text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-6
             transform transition-all duration-1000 ease-out ${
               contentVisible
                 ? "translate-y-0 opacity-100"
@@ -40,9 +40,9 @@ const HeroPage = () => {
           <span className="bg-gradient-to-r from-[#ebf0ee] to-[#55e6a5] bg-clip-text text-transparent italic block">
             International Relations & Global Diplomacy Consulting 
           </span>
-          <span className="text-[#1cefa2] block mt-3">
+          <span className="text-[#ccb2fb] block mt-3">
             IRGDC is not just a platform, it’s a movement
-            </span>
+          </span>
         </h1>
 
         <p
@@ -58,7 +58,7 @@ const HeroPage = () => {
 
         <button
           onClick={goToAbout}
-          className={`bg-[#27d587] hover:bg-[#5fc094] text-white hover:text-white font-semibold py-4 px-12 rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl text-lg
+          className={`bg-[#0a0217] text-[#ccb2fb] hover:opacity-80 font-semibold py-4 px-12 rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl text-lg
             ${
               contentVisible
                 ? "translate-y-0 opacity-100"
