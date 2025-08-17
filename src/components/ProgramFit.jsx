@@ -3,16 +3,16 @@ const ProgramFit = () => {
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#09101a]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white mb-4">
+          <h1 className="text-4xl font-bold text-[#ccb2fb] mb-4">
             This program is <span className="italic">not</span> for everyone
           </h1>
-          <p className="text-xl text-gray-400">Find out if you're the right fit for our program</p>
+          <p className="text-xl text-gray-300">Find out if you're the right fit for our program</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Right Fit Card */}
-          <div className="bg-gradient-to-br from-[#0f1722] to-[#02050a]  p-8 rounded-2xl border border-gray-500 shadow-2xl hover:shadow-gray-800 transition-all">
-            <h2 className="text-2xl font-bold text-white mb-8">You're the right fit if</h2>
+          <div className="bg-gradient-to-br from-[#0f1722] to-[#02050a] p-8 rounded-2xl border border-[#55e6a5] shadow-2xl hover:shadow-[#55e6a5]/30 transition-all">
+            <h2 className="text-2xl font-bold text-[#ccb2fb] mb-8">You're the right fit if</h2>
             <ul className="space-y-6">
               {[
                 "You are a qualified researcher with a Master's degree or higher",
@@ -21,18 +21,18 @@ const ProgramFit = () => {
                 "You are passionate about delivering impactful research and making a difference in people' lives"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mr-4 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#55e6a5] flex items-center justify-center mr-4 mt-0.5">
+                    <span className="text-[#0a0217] text-sm font-bold">✓</span>
                   </div>
-                  <span className="text-gray-400 leading-relaxed">{item}</span>
+                  <span className="text-gray-300 leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Not Right Fit Card */}
-          <div className="bg-gradient-to-br from-[#0f1722] to-[#02050a] p-8 rounded-2xl border border-gray-500 shadow-2xl hover:shadow-gray-800 transition-all">
-            <h2 className="text-2xl font-bold text-white mb-8">It's not for you if</h2>
+          <div className="bg-gradient-to-br from-[#0f1722] to-[#02050a] p-8 rounded-2xl border border-[#ff6b6b] shadow-2xl hover:shadow-[#ff6b6b]/30 transition-all">
+            <h2 className="text-2xl font-bold text-[#ccb2fb] mb-8">It's not for you if</h2>
             <ul className="space-y-6">
               {[
                 "You're still 6+ months from completing your Master's and lack foundational qualifications",
@@ -41,10 +41,10 @@ const ProgramFit = () => {
                 "You're not ready to dedicate the time and effort required to become a skilled professional"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 flex items-center justify-center mr-4 mt-0.5">
-                    <span className="text-white text-sm font-bold">✗</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#ff6b6b] flex items-center justify-center mr-4 mt-0.5">
+                    <span className="text-[#0a0217] text-sm font-bold">✗</span>
                   </div>
-                  <span className="text-gray-400 leading-relaxed">{item}</span>
+                  <span className="text-gray-300 leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>

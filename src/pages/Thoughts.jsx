@@ -3,18 +3,14 @@ import { motion } from "framer-motion"
 
 const Thoughts = () => {
   const content = [
-    [
-      `About VSSER`
-    ],
+    [`About VSSER`],
     [
       `The Virtual Summer School in Entrepreneurship Research (VSSER) is a global, no-fee academic platform designed to build research capacity in the field of entrepreneurship. Established in 2021, VSSER has quickly grown into one of the most accessible and widely attended initiatives for emerging scholars, attracting over 1,000 participants from more than 35 countries in its first four years.`,
     ],
     [
       `VSSER provides an opportunity to learn directly from leading researchers, gain insights into publishing in top-tier entrepreneurship journals, and connect with a global network of like-minded individuals passionate about entrepreneurship research. Whether you are a student, early-career researcher, or an aspiring academic, VSSER offers an inclusive space to enhance your research skills, understand contemporary debates, and engage with cutting-edge scholarship.`,
     ],
-    [
-      `Why Join VSSER?`,true,
-    ],
+    [`Why Join VSSER?`, true],
     [
       `Many have the potential to become exceptional psychologists but need to refine their skills and build confidence before working with clients. Young psychologists excel in theory but need real-world experience.`,
     ],
@@ -33,7 +29,7 @@ const Thoughts = () => {
     visible: (i) => ({
       transition: {
         delayChildren: i * 0.5,
-        staggerChildren: 0.06, // typewriter word by word
+        staggerChildren: 0.06,
       },
     }),
   }
@@ -46,11 +42,6 @@ const Thoughts = () => {
   return (
     <section id="thoughts">
       <div className="relative text-white bg-[#09101a] -z-20 px-6 py-24 gap-y-6 flex flex-col">
-        {/* <img
-          src="/gradient_bg.avif"
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10 opacity-40"
-        /> */}
-
         {content.map(([line1, line2, highlight], index) => {
           const words = (line1 + (line2 ? " " + line2 : "")).split(" ")
           const isHighlighted = (i) => highlight && i >= line1.split(" ").length
@@ -73,7 +64,7 @@ const Thoughts = () => {
                 <motion.span
                   key={i}
                   className={`inline-block mr-2 ${
-                    isHighlighted(i) ? "text-[#00ff9f]" : ""
+                    isHighlighted(i) ? "text-[#0a0217]" : ""
                   }`}
                   variants={wordFade}
                 >
