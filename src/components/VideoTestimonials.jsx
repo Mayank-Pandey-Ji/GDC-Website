@@ -19,9 +19,9 @@ const VideoTestimonials = () => {
   };
 
   return (
-    <section className="py-16 px-6 sm:px-8 lg:px-12 bg-purple-50">
+    <section className="py-16 px-6 sm:px-8 lg:px-12 bg-cyan-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-purple-700">
+        <h2 className="text-4xl font-bold text-center mb-12 text-[#0f1e25]">
           See Our Program in Action
         </h2>
         
@@ -32,25 +32,25 @@ const VideoTestimonials = () => {
               videos.slice(0, Math.max(0, (currentSlide + 3) - videos.length))
             ).map((video, index) => (
               <div key={`${currentSlide}-${index}`} className="group cursor-pointer">
-                <div className="bg-white rounded-2xl overflow-hidden aspect-video relative border border-purple-200 shadow-md hover:shadow-xl transition-all hover:scale-105">
+                <div className="bg-white rounded-2xl overflow-hidden aspect-video relative border border-cyan-400 shadow-md hover:shadow-xl transition-all hover:scale-105">
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-all shadow-md">
-                      <svg className="w-7 h-7 text-purple-700 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center group-hover:bg-cyan-200 transition-all shadow-md">
+                      <svg className="w-7 h-7 text-cyan-400 ml-1" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
                   </div>
                   
                   {/* Duration Badge */}
-                  <div className="absolute bottom-4 right-4 bg-purple-600/90 px-2 py-1 rounded text-white text-sm shadow-sm">
+                  <div className="absolute bottom-4 right-4 bg-cyan-400 px-2 py-1 rounded text-white text-sm shadow-sm">
                     {video.duration}
                   </div>
                 </div>
                 
                 <div className="mt-4">
-                  <p className="text-purple-700 font-medium text-center">{video.title}</p>
+                  <p className="text-[#0f1e25] font-medium text-center">{video.title}</p>
                 </div>
               </div>
             ))}
@@ -60,7 +60,7 @@ const VideoTestimonials = () => {
           <div className="flex justify-center items-center space-x-4">
             <button 
               onClick={prevSlide}
-              className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-400 hover:from-purple-500 hover:to-purple-700 text-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-md"
+              className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-300 hover:from-cyan-300 hover:to-cyan-400 text-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-md"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
@@ -75,8 +75,8 @@ const VideoTestimonials = () => {
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentSlide 
-                      ? 'bg-purple-600 scale-125' 
-                      : 'bg-purple-200 hover:bg-purple-400'
+                      ? 'bg-cyan-400 scale-125' 
+                      : 'bg-cyan-200 hover:bg-cyan-400'
                   }`}
                 />
               ))}
@@ -84,7 +84,7 @@ const VideoTestimonials = () => {
             
             <button 
               onClick={nextSlide}
-              className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-400 hover:from-purple-500 hover:to-purple-700 text-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-md"
+              className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-cyan-300 hover:from-cyan-300 hover:to-cyan-400 text-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-md"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -94,8 +94,8 @@ const VideoTestimonials = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Ready to transform your research career?</p>
-            <button className="bg-gradient-to-r from-purple-600 to-purple-400 hover:from-purple-500 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all hover:scale-105 shadow-lg">
+            <p className="text-gray-400 mb-6">Ready to transform your research career?</p>
+            <button className="bg-gradient-to-r from-cyan-400 to-cyan-300 hover:from-cyan-300 hover:to-cyan-400 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all hover:scale-105 shadow-lg">
               Watch Full Program Overview
             </button>
           </div>

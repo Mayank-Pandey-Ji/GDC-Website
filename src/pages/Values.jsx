@@ -43,7 +43,7 @@ const Values = () => {
         {/* Top Heading */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
-            <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_#a855f7]">
+            <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_#22d3ee]">
               Core Values of International Relations & Global Diplomacy Consulting
             </h1>
           </div>
@@ -54,15 +54,15 @@ const Values = () => {
           {valueItems.map(({ icon: Icon, text }, index) => (
             <div
               key={index}
-              className="group flex items-start gap-4 p-6 rounded-xl border border-gray-200 hover:border-purple-400 transition-all duration-300 bg-gray-50 hover:shadow-lg hover:scale-[1.02]"
+              className="group flex items-start gap-4 p-6 rounded-xl border border-gray-200 hover:border-cyan-400 transition-all duration-300 bg-gray-50 hover:shadow-lg hover:scale-[1.02]"
             >
               {/* Icon container */}
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 border-2 border-purple-400 rounded-full flex items-center justify-center shadow-md">
-                <Icon className="text-purple-500 text-xl" />
+              <div className="flex-shrink-0 w-12 h-12 bg-cyan-100 border-2 border-cyan-400 rounded-full flex items-center justify-center shadow-md">
+                <Icon className="text-cyan-400 text-xl" />
               </div>
 
               {/* Text */}
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed transition-colors duration-300 group-hover:text-gray-900">
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed transition-colors duration-300 group-hover:text-[#0f1e25]">
                 {text}
               </p>
             </div>
