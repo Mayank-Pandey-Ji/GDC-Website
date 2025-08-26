@@ -15,7 +15,7 @@ const CohortCard = ({ icons: Icon, title, desc }) => {
         {desc.map((line, i) => (
           <p
             key={i}
-            className="whitespace-normal text-[1.05rem] text-gray-700 leading-relaxed"
+            className="whitespace-normal text-[1.05rem] text-[#9ca3af] leading-relaxed"
           >
             {line}
           </p>

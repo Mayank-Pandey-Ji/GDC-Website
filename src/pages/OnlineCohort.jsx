@@ -73,32 +73,33 @@ const OnlineCohort = () => {
         </div>
       </section>
 
-      <section id="mentors" className="bg-[#FDF4DC]">
-        <div className="w-full text-[#533A71] py-14 flex flex-col items-center justify-center text-center gap-y-4 px-4">
-          <span className="font-semibold text-base md:text-lg tracking-wide uppercase">
+      {/* Mentors Section */}
+      <section id="mentors" className="bg-[#0f1e25]">
+        <div className="w-full text-white py-14 flex flex-col items-center justify-center text-center gap-y-4 px-4">
+          <span className="font-semibold text-base md:text-lg tracking-wide uppercase text-[#00d4ff]">
+
             MEET YOUR MENTORS
           </span>
-          <h2 className="font-bold text-2xl md:text-4xl max-w-xl leading-snug">
+          <h2 className="font-bold text-2xl md:text-4xl max-w-xl leading-snug text-white">
             Guided by world-class researchers, every week.
           </h2>
-          <p className="text-sm md:text-base text-[#7A5FA3]">Learn from the best</p>
+          <p className="text-sm md:text-base text-[#4f9eff]">Learn from the best</p>
         </div>
       </section>
-
-      <section className="bg-white text-[#533A71] py-14 px-4">
+      {/* Objectives Section */}
+      <section className="bg-[#0f1e25] text-white py-14 px-4">
         <div className="flex flex-col items-center justify-center text-center w-full gap-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Objectives of International Relations & Global Diplomacy Consulting
-            (IRGDC)
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Objectives of International Relations & Global Diplomacy Consulting (IRGDC)
           </h2>
-          <p className="font-medium text-lg text-[#7A5FA3] max-w-4xl leading-relaxed">
-            The objectives of GDC are framed to guide the platform's growth,
-            output, and institutional effectiveness in a phased and focused
-            manner. These objectives translate GDC's broader values and ambitions
-            into concrete, measurable, and time-bound goals that support
-            long-term impact and operational success. Each objective below is
-            mapped to a strategic function of the organization, ensuring that GDC
-            evolves as a results-oriented, adaptive, and mission-driven platform.
+          <p className="font-medium text-lg text-[#00d4ff] max-w-4xl leading-relaxed">
+            The objectives of GDC are framed to guide the platform's growth, output,
+            and institutional effectiveness in a phased and focused manner. These
+            objectives translate GDC's broader values and ambitions into concrete,
+            measurable, and time-bound goals that support long-term impact and
+            operational success. Each objective below is mapped to a strategic
+            function of the organization, ensuring that GDC evolves as a
+            results-oriented, adaptive, and mission-driven platform.
           </p>
         </div>
 
@@ -157,7 +158,7 @@ const OnlineCohort = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl shadow-md border border-[#E5D9F2] hover:border-[#A799B7] hover:shadow-lg hover:scale-105 transition-all duration-300 p-6"
+                className="bg-[#09101a] rounded-xl shadow-md border border-[#3b82f6] hover:border-[#00d4ff] hover:shadow-lg hover:scale-105 transition-all duration-300 p-6"
               >
                 <CohortCard
                   icons={item.icon}
