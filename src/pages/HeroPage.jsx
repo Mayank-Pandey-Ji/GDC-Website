@@ -37,16 +37,16 @@ const HeroPage = () => {
                 : "translate-y-10 opacity-0"
             }`}
         >
-          <span className="bg-gradient-to-r from-[#1e0143] to-[#533a71] bg-clip-text text-transparent italic block">
-            International Relations & Global Diplomacy Consulting 
+          <span className="bg-gradient-to-r from-[#ebf0ee] to-cyan-400 bg-clip-text text-transparent italic block">
+            Global Diplomacy Consulting 
           </span>
-          <span className="text-[#533a71] block mt-3">
-            IRGDC is not just a platform, it’s a movement
-          </span>
+          <span className="text-cyan-400 block mt-3">
+            GDC is not just a platform, It’s a movement
+            </span>
         </h1>
 
         <p
-          className={`mt-6 text-lg sm:text-xl text-purple-500 max-w-3xl mb-10
+          className={`mt-6 text-lg sm:text-xl text-gray-500 max-w-3xl mb-10 font-medium
             transform transition-all duration-1000 delay-300 ease-out ${
               contentVisible
                 ? "translate-y-0 opacity-100"
@@ -58,7 +58,7 @@ const HeroPage = () => {
 
         <button
           onClick={goToAbout}
-          className={`bg-[#0a0217] text-[#ccb2fb] hover:opacity-80 font-semibold py-4 px-12 rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl text-lg
+          className={`bg-cyan-800 hover:bg-cyan-400 text-white hover:text-black font- medium py-4 px-12 rounded-full transition-all duration-500 transform hover:scale-105 shadow-xl text-lg
             ${
               contentVisible
                 ? "translate-y-0 opacity-100"
