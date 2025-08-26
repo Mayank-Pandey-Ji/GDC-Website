@@ -38,7 +38,7 @@ function highlightText(text, highlights) {
     const regex = new RegExp(`(${phrase})`, 'gi');
     result = result.replace(
       regex,
-      '<span class="bg-purple-100 px-1 rounded text-purple-700 font-medium">$1</span>'
+      '<span class="bg-cyan-400 px-1 rounded text-[#0f1e25] font-medium">$1</span>'
     );
   });
   return result;
@@ -62,14 +62,14 @@ const TestimonialCarousel = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="relative bg-gradient-to-br from-purple-50 to-white rounded-2xl p-1 shadow-lg max-w-2xl mx-auto border border-purple-200">
+              <div className="relative bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-1 shadow-lg max-w-2xl mx-auto border border-cyan-400">
                 <div className="bg-white rounded-2xl p-8">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <span
                         key={i}
                         className={`text-2xl ${
-                          i < testimonial.rating ? 'text-purple-500' : 'text-gray-300'
+                          i < testimonial.rating ? 'text-cyan-400' : 'text-gray-300'
                         }`}
                       >
                         ★
@@ -77,13 +77,13 @@ const TestimonialCarousel = () => {
                     ))}
                   </div>
                   <p
-                    className="text-gray-700 italic mb-6 leading-relaxed"
+                    className="text-gray-400 italic mb-6 leading-relaxed"
                     dangerouslySetInnerHTML={{
                       __html: highlightText(testimonial.quote, testimonial.highlights),
                     }}
                   />
                   <div className="flex items-center mt-4">
-                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-purple-400">
+                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-cyan-400">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -91,8 +91,8 @@ const TestimonialCarousel = () => {
                       />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                      <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                      <p className="font-semibold text-[#0f1e25]">{testimonial.name}</p>
+                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>

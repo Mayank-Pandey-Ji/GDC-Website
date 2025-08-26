@@ -35,35 +35,35 @@ const visionFeatures = [
 ];
 
 const VisionTimelineItem = ({ icon: Icon, title, description, isLast }) => (
-  <div className="relative pl-14 pb-12 border-l border-gray-300">
+  <div className="relative pl-14 pb-12 border-l border-gray-400">
     {/* Circle with Icon */}
-    <div className="absolute -left-7 top-1 w-14 h-14 bg-white border-2 border-purple-500 rounded-full flex items-center justify-center z-10 shadow-md">
-      <Icon className="text-purple-500 text-2xl" />
+    <div className="absolute -left-7 top-1 w-14 h-14 bg-white border-2 border-cyan-400 rounded-full flex items-center justify-center z-10 shadow-md">
+      <Icon className="text-[#0f1e25] text-2xl" />
     </div>
 
     {/* Content */}
-    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:border-purple-300 transition">
-      <h3 className="text-gray-900 text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-400 hover:border-cyan-400 transition">
+      <h3 className="text-[#0f1e25] text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
     </div>
 
     {/* Line extender */}
     {!isLast && (
-      <div className="absolute left-[11px] top-16 w-0.5 h-full bg-gray-300"></div>
+      <div className="absolute left-[11px] top-16 w-0.5 h-full bg-gray-400"></div>
     )}
   </div>
 );
 
 const VisionSection = () => {
   return (
-    <section className="min-h-screen py-16 px-6 md:px-20 bg-gray-50">
+    <section className="min-h-screen py-16 px-6 md:px-20 bg-cyan-50">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0f1e25] mb-4">
             Our Vision at International Relations & Global Diplomacy Consulting
           </h2>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+          <p className="text-base md:text-lg text-[#0f1e25] leading-relaxed">
             We envision IRGDC as a globally recognized hub for excellence in diplomacy,
             international relations, and public policy where young minds lead, publish,
             and innovate for real-world impact. We believe in rising and thriving sustainably.
