@@ -17,14 +17,14 @@ const HeroPage = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#fdf4dc]"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Background Image */}
-      {/* <img
+  
+      <img
         src="https://bocconsultingpro.com/images/detail_service5.jpg"
         alt="Global Diplomacy Network Background"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-30 animate-zoom-in"
-      /> */}
+      /> 
       <div className="absolute inset-0  opacity-50"></div>
 
       {/* Content */}
