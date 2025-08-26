@@ -1,5 +1,3 @@
-
-
 const articles = [
   {
     title: "Hollywood and China: A Silent Struggle for Cultural Dominance",
@@ -38,26 +36,30 @@ const articles = [
 const Articles = () => {
   return (
     <div className="bg-[#09101a] min-h-screen text-white">
+      {/* Header */}
       <div className="py-10 flex justify-end pr-6 sm:px-8 md:px-12 lg:px-20">
-        <h1 className="text-green-400 text-[48px] sm:text-[72px] md:text-[96px] lg:text-[120px] font-bold leading-none tracking-tight text-center md:text-right" 
-        style={{ 
-          fontFamily: "Arial, Helvetica, sans-serif" 
-          }}>
+        <h1
+          className="text-green-400 text-[48px] sm:text-[72px] md:text-[96px] lg:text-[120px] font-bold leading-none tracking-tight text-center md:text-right"
+          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+        >
           Articles
         </h1>
       </div>
 
+      {/* Articles Grid */}
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-12 px-4 sm:px-8 md:px-12 lg:px-20 pb-20">
         {articles.map((article, idx) => (
           <div
             key={idx}
-            className="relative h-60 sm:h-64 md:h-72 w-full max-w-md mx-auto overflow-hidden shadow-lg"
+            className="relative h-60 sm:h-64 md:h-72 w-full max-w-md mx-auto overflow-hidden shadow-lg rounded-xl group hover:scale-105 transition-transform duration-300"
           >
             <img
               src={article.image}
               alt={article.title}
-              className="object-cover w-full h-full opacity-30"
+              className="object-cover w-full h-full opacity-40 group-hover:opacity-60 transition-opacity duration-300"
             />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
 
             <div className="absolute inset-0 flex items-end p-4 sm:p-5">
               <h2

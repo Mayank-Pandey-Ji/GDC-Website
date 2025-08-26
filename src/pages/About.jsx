@@ -6,7 +6,7 @@ const About = () => {
   const nextStep = () => setStep((prev) => prev + 1);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0d0d0d] text-green-400 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0d0d0d] text-[#ccb2fb] p-6">
       {step === 0 && (
         <div className="text-center space-y-4">
           <h2 className="text-xl">Hello hello 👋</h2>
@@ -14,7 +14,7 @@ const About = () => {
           <p className="text-lg">Please fill in the following questions, to help us know you better.</p>
           <button
             onClick={nextStep}
-            className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
+            className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80"
           >
             Start
           </button>
@@ -29,7 +29,7 @@ const About = () => {
           </p>
           <button
             onClick={nextStep}
-            className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700"
+            className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80"
           >
             Continue
           </button>
@@ -43,9 +43,9 @@ const About = () => {
           <input
             type="text"
             placeholder="Type your answer here..."
-            className="w-full p-2 border-b-2 border-green-600 bg-transparent text-green-400 placeholder-green-300 focus:outline-none"
+            className="w-full p-2 border-b-2 border-[#ccb2fb] bg-transparent text-[#ccb2fb] placeholder-[#ccb2fb]/70 focus:outline-none"
           />
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -57,9 +57,9 @@ const About = () => {
           <input
             type="email"
             placeholder="name@example.com"
-            className="w-full p-2 border-b-2 border-green-600 bg-transparent text-green-400 placeholder-green-300 focus:outline-none"
+            className="w-full p-2 border-b-2 border-[#ccb2fb] bg-transparent text-[#ccb2fb] placeholder-[#ccb2fb]/70 focus:outline-none"
           />
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -71,9 +71,9 @@ const About = () => {
           <input
             type="tel"
             placeholder="81234 56789"
-            className="w-full p-2 border-b-2 border-green-600 bg-transparent text-green-400 placeholder-green-300 focus:outline-none"
+            className="w-full p-2 border-b-2 border-[#ccb2fb] bg-transparent text-[#ccb2fb] placeholder-[#ccb2fb]/70 focus:outline-none"
           />
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -86,9 +86,9 @@ const About = () => {
           <input
             type="text"
             placeholder="Type your answer here..."
-            className="w-full p-2 border-b-2 border-green-600 bg-transparent text-green-400 placeholder-green-300 focus:outline-none"
+            className="w-full p-2 border-b-2 border-[#ccb2fb] bg-transparent text-[#ccb2fb] placeholder-[#ccb2fb]/70 focus:outline-none"
           />
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -100,9 +100,9 @@ const About = () => {
           <input
             type="text"
             placeholder="Type your answer here..."
-            className="w-full p-2 border-b-2 border-green-600 bg-transparent text-green-400 placeholder-green-300 focus:outline-none"
+            className="w-full p-2 border-b-2 border-[#ccb2fb] bg-transparent text-[#ccb2fb] placeholder-[#ccb2fb]/70 focus:outline-none"
           />
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -115,13 +115,13 @@ const About = () => {
             {['Male', 'Female', 'Do not wish to mention', 'Other'].map((option, index) => (
               <div
                 key={index}
-                className="border border-green-600 bg-green-900 text-green-300 p-2 rounded cursor-pointer hover:bg-green-800"
+                className="border border-[#ccb2fb] bg-[#0a0217] text-[#ccb2fb] p-2 rounded cursor-pointer hover:opacity-80"
               >
                 {String.fromCharCode(65 + index)}. {option}
               </div>
             ))}
           </div>
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -131,16 +131,16 @@ const About = () => {
         <div className="text-center space-y-4 w-full max-w-xl">
           <label className="text-lg font-semibold">7 → What's your gender?*</label>
           <div className="space-y-2">
-            {['Man', 'Women', 'Transgender Man', 'Transgender Women' , 'Agender' , 'Others'].map((option, index) => (
+            {['Man', 'Women', 'Transgender Man', 'Transgender Women', 'Agender', 'Others'].map((option, index) => (
               <div
                 key={index}
-                className="border border-green-600 bg-green-900 text-green-300 p-2 rounded cursor-pointer hover:bg-green-800"
+                className="border border-[#ccb2fb] bg-[#0a0217] text-[#ccb2fb] p-2 rounded cursor-pointer hover:opacity-80"
               >
                 {String.fromCharCode(65 + index)}. {option}
               </div>
             ))}
           </div>
-          <button  onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -153,13 +153,13 @@ const About = () => {
             {['She/her', 'he/him', 'they/them', 'Other'].map((option, index) => (
               <div
                 key={index}
-                className="border border-green-600 bg-green-900 text-green-300 p-2 rounded cursor-pointer hover:bg-green-800"
+                className="border border-[#ccb2fb] bg-[#0a0217] text-[#ccb2fb] p-2 rounded cursor-pointer hover:opacity-80"
               >
                 {String.fromCharCode(65 + index)}. {option}
               </div>
             ))}
           </div>
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -172,13 +172,13 @@ const About = () => {
             {['Yes', 'No, I have applied Before'].map((option, index) => (
               <div
                 key={index}
-                className="border border-green-600 bg-green-900 text-green-300 p-2 rounded cursor-pointer hover:bg-green-800"
+                className="border border-[#ccb2fb] bg-[#0a0217] text-[#ccb2fb] p-2 rounded cursor-pointer hover:opacity-80"
               >
                 {String.fromCharCode(65 + index)}. {option}
               </div>
             ))}
           </div>
-          <button onClick={nextStep} className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button onClick={nextStep} className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
@@ -188,16 +188,15 @@ const About = () => {
         <div className="text-center space-y-4 w-full max-w-xl">
           <label className="text-lg font-semibold">10 → What's your bachelors' in?*</label>
           <input
-            type="tel"
-            placeholder="Yes"
-            className="w-full p-2 border-b-2 border-green-600 bg-transparent text-green-400 placeholder-green-300 focus:outline-none"
+            type="text"
+            placeholder="Type your answer here..."
+            className="w-full p-2 border-b-2 border-[#ccb2fb] bg-transparent text-[#ccb2fb] placeholder-[#ccb2fb]/70 focus:outline-none"
           />
-          <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button className="bg-[#0a0217] text-[#ccb2fb] px-6 py-2 rounded hover:opacity-80">
             OK
           </button>
         </div>
       )}
-
     </div>
   );
 };

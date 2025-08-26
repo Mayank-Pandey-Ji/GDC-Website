@@ -1,78 +1,72 @@
 import React from "react";
 import {
-  FaGlobe,
-  FaBookOpen,
-  FaLightbulb,
-  FaUniversity,
-  FaNetworkWired,
-  FaVideo
+  FaUsers,
+  FaPenFancy,
+  FaHandsHelping,
+  FaGraduationCap,
+  FaBalanceScale,
 } from "react-icons/fa";
 
 const visionFeatures = [
   {
-    icon: FaGlobe,
-    title: "A Global Place for Young Diplomats",
+    icon: FaUsers,
+    title: "Global Youth Diplomacy Network",
     description:
-      "We aim to connect student leaders across Asia, Africa, the Americas, and Europe—creating a space for diverse voices to collaborate and lead. With global partnerships, GDC will become a recognized name in cross-border dialogue and academic cooperation.",
+      "A space where students from across the world connect and collaborate.",
   },
   {
-    icon: FaBookOpen,
-    title: "A Platform for Student Writers",
+    icon: FaPenFancy,
+    title: "Publishing Powerhouse",
     description:
-      "GDC will publish high-quality, student-led research—journals, reports, books, and digital content. We bridge the gap between youth ideas and formal scholarship, helping young writers influence real-world policy and academic thought.",
+      "A quality driven platform for student-led research and commentary in global affairs.",
   },
   {
-    icon: FaLightbulb,
-    title: "Support for Young Changemakers",
+    icon: FaHandsHelping,
+    title: "Policy Incubator",
     description:
-      "We support students through fellowships, residencies, and incubation programs—turning bold ideas into real-world projects, campaigns, and solutions rooted in justice and cooperation.",
+      "A launchpad for socially conscious changemakers and diplomacy-driven ventures.",
   },
   {
-    icon: FaUniversity,
-    title: "A New Way to Learn Diplomacy",
+    icon: FaGraduationCap,
+    title: "New Model of Diplomacy Education",
     description:
-      "GDC promotes a modern, hands-on model of diplomacy education—using projects, teamwork, and writing to prepare students for global challenges.",
-  },
-  {
-    icon: FaNetworkWired,
-    title: "Fair and Inclusive Leadership",
-    description:
-      "We focus on leadership from the Global South, ensuring diverse youth voices shape the future of diplomacy, knowledge, and cooperation worldwide.",
+      "Interactive, research-based, and practice-oriented learning that reflects today’s global challenges.",
   },
 ];
 
-
 const VisionTimelineItem = ({ icon: Icon, title, description, isLast }) => (
-  <div className="relative pl-12 pb-10 border-l border-gray-600">
-    {/* Dot with Icon */}
-    <div className="absolute -left-6 top-1 w-12 h-12 bg-[#0f1722] border-2 border-[#00ff9f] rounded-full flex items-center justify-center z-10">
-      <Icon className="text-[#00ff9f] text-xl" />
+  <div className="relative pl-14 pb-12 border-l border-gray-300">
+    {/* Circle with Icon */}
+    <div className="absolute -left-7 top-1 w-14 h-14 bg-white border-2 border-purple-500 rounded-full flex items-center justify-center z-10 shadow-md">
+      <Icon className="text-purple-500 text-2xl" />
     </div>
 
     {/* Content */}
-    <div className="bg-[#111827] p-6 rounded-lg shadow-lg border border-gray-600 hover:shadow-orange-900/20 transition">
-      <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-400 text-sm">{description}</p>
+    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:border-purple-300 transition">
+      <h3 className="text-gray-900 text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
     </div>
 
-    {/* Vertical Line Extender */}
+    {/* Line extender */}
     {!isLast && (
-      <div className="absolute left-[9px] top-14 w-0.5 h-full bg-gray-600"></div>
+      <div className="absolute left-[11px] top-16 w-0.5 h-full bg-gray-300"></div>
     )}
   </div>
 );
 
 const VisionSection = () => {
   return (
-    <section className="min-h-screen py-16 px-20  bg-[#0a0f1a]">
+    <section className="min-h-screen py-16 px-6 md:px-20 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our Vision at Global Diplomacy Consulting
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Vision at International Relations & Global Diplomacy Consulting
           </h2>
-          <p className="text-lg text-gray-400">
-            At GDC, we want to build a global space where students can learn, lead, and create real change in diplomacy, public policy, and international relations.We believe young people—especially from the Global South—should shape the future through knowledge, teamwork, and bold ideas.
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            We envision IRGDC as a globally recognized hub for excellence in diplomacy,
+            international relations, and public policy where young minds lead, publish,
+            and innovate for real-world impact. We believe in rising and thriving sustainably.
           </p>
         </div>
 

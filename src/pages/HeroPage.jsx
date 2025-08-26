@@ -17,20 +17,20 @@ const HeroPage = () => {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#fdf4dc]"
     >
       {/* Background Image */}
-      <img
+      {/* <img
         src="https://bocconsultingpro.com/images/detail_service5.jpg"
         alt="Global Diplomacy Network Background"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-30 animate-zoom-in"
-      />
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      /> */}
+      <div className="absolute inset-0  opacity-50"></div>
 
-      {/* Content Container */}
+      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 sm:px-10 text-center max-w-4xl mx-auto py-20">
         <h1
-          className={`text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white mb-6
+          className={`text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-6
             transform transition-all duration-1000 ease-out ${
               contentVisible
                 ? "translate-y-0 opacity-100"
