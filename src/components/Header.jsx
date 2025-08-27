@@ -31,7 +31,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-10 py-2 flex justify-between items-center">
         <button
           onClick={goToHome}
-          className="rounded-lg text-lg text-[#533a71] font-bold hover:text-[#630ccd] hover:scale-105 transition-all duration-300 ease-out"
+          className="rounded-lg text-lg text-[#c8ebef] font-bold hover:text-[#630ccd] hover:scale-105 transition-all duration-300 ease-out"
         >
           GDC
         </button>
