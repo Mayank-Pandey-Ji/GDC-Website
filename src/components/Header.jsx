@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-colors duration-500 ${
-        isScrolled ? "bg-[#141c27cc] bg-opacity-80" : "bg-[#a799b7]"
+        isScrolled ? "bg-[#0f1e25] bg-opacity-80" : "bg-[#a799b7]"
       }`}
     >
       <div className="max-w-6xl mx-auto px-10 py-2 flex justify-between items-center">
@@ -33,7 +33,7 @@ export default function Header() {
           onClick={goToHome}
           className="rounded-lg text-lg text-[#533a71] font-bold hover:text-[#630ccd] hover:scale-105 transition-all duration-300 ease-out"
         >
-          IRGDC
+          GDC
         </button>
         <nav className="space-x-6 flex gap-2">
           {/* Example button with theme colors */}
