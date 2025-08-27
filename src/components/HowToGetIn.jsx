@@ -23,22 +23,22 @@ const HowToGetIn = () => {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-cyan-50">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0f1e25]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0f1e25] mb-4">How do you get in?</h1>
+          <h1 className="text-4xl font-bold text-cyan-400 mb-4">How do you get in?</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all border border-cyan-400 text-center"
+              className="bg-[#181f28] p-8 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all border border-cyan-400/40 text-center"
             >
-              <div className="w-16 h-16 border-2 border-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6 bg-cyan-50">
+              <div className="w-16 h-16 border-2 border-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6 bg-[#13171f]">
                 <step.icon className="text-3xl text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-[#0f1e25] mb-4">{step.title}</h3>
+              <h3 className="text-xl font-semibold text-[#ebf0ee] mb-4">{step.title}</h3>
               <p className="text-gray-400 leading-relaxed">{step.desc}</p>
             </div>
           ))}
