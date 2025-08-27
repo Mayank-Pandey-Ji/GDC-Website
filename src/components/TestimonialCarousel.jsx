@@ -46,9 +46,9 @@ function highlightText(text, highlights) {
 
 const TestimonialCarousel = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0f1e25] min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">
           Hear from our members
         </h2>
         <Swiper
@@ -62,14 +62,14 @@ const TestimonialCarousel = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="relative bg-gradient-to-br from-cyan-50 to-white rounded-2xl p-1 shadow-lg max-w-2xl mx-auto border border-cyan-400">
-                <div className="bg-white rounded-2xl p-8">
+              <div className="relative bg-gradient-to-br from-[#132137] to-[#181f28] rounded-2xl p-1 shadow-lg max-w-2xl mx-auto border border-cyan-400">
+                <div className="bg-[#181f28] rounded-2xl p-8">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <span
                         key={i}
                         className={`text-2xl ${
-                          i < testimonial.rating ? 'text-cyan-400' : 'text-gray-300'
+                          i < testimonial.rating ? 'text-cyan-400' : 'text-gray-700'
                         }`}
                       >
                         ★
@@ -77,13 +77,13 @@ const TestimonialCarousel = () => {
                     ))}
                   </div>
                   <p
-                    className="text-gray-400 italic mb-6 leading-relaxed"
+                    className="text-gray-300 italic mb-6 leading-relaxed"
                     dangerouslySetInnerHTML={{
                       __html: highlightText(testimonial.quote, testimonial.highlights),
                     }}
                   />
                   <div className="flex items-center mt-4">
-                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-cyan-400">
+                    <div className="w-12 h-12 rounded-full bg-[#181f28] mr-4 overflow-hidden border-2 border-cyan-400">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -92,7 +92,7 @@ const TestimonialCarousel = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-[#0f1e25]">{testimonial.name}</p>
-                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                      <p className="text-cyan-400 text-sm">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
