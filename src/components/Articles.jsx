@@ -33,46 +33,56 @@ const articles = [
   },
 ];
 
+const ArticleCard = ({ article }) => {
+  return (
+    // The entire card is now a link
+    <a
+      href={article.link}
+      className="relative block h-72 w-full max-w-md mx-auto overflow-hidden shadow-lg rounded-xl group"
+    >
+      {/* Background Image with smooth transition */}
+      <img
+        src={article.image}
+        alt={article.title}
+        className="object-cover w-full h-full transition-all duration-500 ease-in-out transform group-hover:scale-110"
+      />
+      
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+      {/* Content Container */}
+      <div className="absolute inset-0 flex flex-col justify-end p-6">
+        {/* Title: Slides up on hover */}
+        <h2 className="text-white text-2xl font-bold leading-tight transition-all duration-300 ease-in-out transform group-hover:-translate-y-8 font-heading">
+          {article.title}
+        </h2>
+
+        {/* "Read More" link with animated arrow: Fades in and slides up */}
+        <div className="flex items-center mt-2 text-green-400 transition-all duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 group-hover:-translate-y-8">
+          <p className="font-semibold">Read More</p>
+          {/* Arrow moves to the right on hover */}
+          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+// --- Main Articles Component ---
 const Articles = () => {
   return (
     <div className="bg-[#09101a] min-h-screen text-white">
       {/* Header */}
       <div className="py-10 flex justify-end pr-6 sm:px-8 md:px-12 lg:px-20">
-        <h1
-          className="text-green-400 text-[48px] sm:text-[72px] md:text-[96px] lg:text-[120px] font-bold leading-none tracking-tight text-center md:text-right"
-          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
-        >
+        <h1 className="text-green-400 text-[48px] sm:text-[72px] md:text-[96px] lg:text-[120px] font-bold leading-none tracking-tight text-center md:text-right font-heading">
           Articles
         </h1>
       </div>
 
       {/* Articles Grid */}
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-12 px-4 sm:px-8 md:px-12 lg:px-20 pb-20">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-12 gap-x-8 px-4 sm:px-8 md:px-12 lg:px-20 pb-20">
         {articles.map((article, idx) => (
-          <div
-            key={idx}
-            className="relative h-60 sm:h-64 md:h-72 w-full max-w-md mx-auto overflow-hidden shadow-lg rounded-xl group hover:scale-105 transition-transform duration-300"
-          >
-            <img
-              src={article.image}
-              alt={article.title}
-              className="object-cover w-full h-full opacity-40 group-hover:opacity-60 transition-opacity duration-300"
-            />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-
-            <div className="absolute inset-0 flex items-end p-4 sm:p-5">
-              <h2
-                className="text-white text-xl sm:text-2xl font-semibold leading-tight"
-                style={{
-                  fontFamily:
-                    "HelveticaNeueW01-45Ligh, HelveticaNeueW02-45Ligh, HelveticaNeueW10-45Ligh, sans-serif",
-                }}
-              >
-                {article.title}
-              </h2>
-            </div>
-          </div>
+          <ArticleCard key={idx} article={article} />
         ))}
       </div>
     </div>
