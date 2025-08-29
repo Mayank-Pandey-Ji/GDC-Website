@@ -118,7 +118,7 @@ const GDCAbout = () => (
           },
         ].map((item, idx) => (
           <AnimatedSection key={idx} className="group">
-            <div className="relative pl-10 pr-6 py-6 bg-gradient-to-br from-[#122b39]/80 to-[#0c1a21]/80 border border-cyan-700/50 rounded-lg shadow-lg hover:border-cyan-400 hover:shadow-cyan-400/20 transition-all duration-300">
+            <div className="relative pl-10 pr-6 py-6 bg-gradient-to-br from-[#122b39]/80 to-[#0c1a21]/80 border border-cyan-700/50 rounded-lg shadow-lg hover:border-cyan-400 hover:shadow-cyan-400/20 hover:bg-blue-600 transition-all duration-300">
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
